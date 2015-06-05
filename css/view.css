@@ -1,0 +1,55 @@
+#professor_info {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 30%;
+}
+#professor_info .picture {
+	position: absolute;
+	left: 0;
+	width: 20%;
+	height: 100%;
+	margin-right: 2%;
+}
+#professor_info .picture img {
+	width: 100%;
+	height: 100%;
+}
+#professor_info .info {
+	position: absolute;
+	left: 22%;
+	width: 30%;
+	height: 100%;
+	margin-right: 2%;
+}
+#professor_info .evaluation {
+	position: absolute;
+	left: 54%;
+	width: 46%;
+	height: 100%;
+}
+#professor_info .graph {
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	width: 90%;
+	height: 70%;
+	margin: 3%;
+	border: 1px solid #999;
+}
+#professor_info #evalButton {
+	position: absolute;
+	right: 1%;
+	bottom: 1%;
+	color: red;
+}
+#board {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	height: 60%;
+}
+#board object {
+	width: 100%;
+	height: 100%;
+}
