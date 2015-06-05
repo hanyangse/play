@@ -8,9 +8,20 @@ exports.list = function(req, res){
 };
 
 exports.signin = function(req, res){
-	res.render('signin');
+	if(req.session.studentid){
+		console.log("로그인 되어있음");
+	}else{
+		console.log("signin 으로 진입	");
+		res.render('signin.ejs');	
+	}
+	
 }
 
 exports.signup = function(req, res){
-	res.render('signup');
+	if(req.session.studentid){
+		console.log("로그인 되어있음");
+	}else{
+		res.render('signup');
+	}
+	
 }
