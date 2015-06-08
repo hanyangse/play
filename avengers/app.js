@@ -14,8 +14,8 @@ var app = express();
 var connection = mysql.createConnection({
 	host : 'localhost',
 	port : 3306,
-	user : 'softcone',
-	password : 'softcone1',
+	user : 'root',
+	password : 'root',
 	database : 'sese'
 });
 
@@ -113,6 +113,7 @@ app.post('/logout',function(req,res){
 	req.session.studentid=undefined;
 	res.render('signin.ejs');
 });
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
