@@ -33,6 +33,9 @@ section > article{
 	width : 450px;
 	height: 280px;
 	padding:10px;
+	position: absolute;
+	top: 200px;
+	left: 60px;
 }
 article h1{
 	font-size: 50px;
