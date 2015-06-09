@@ -8,12 +8,12 @@ function init(){
 	
 	$(".evalButton").click(function(){
 		var popupOptions = "width=650px,height=500px,location=no,resizable=yes,scrollbars=yes,menubar=no,toolbar=no;";
-		window.open("/html/evaluation.html", 'evaluation', popupOptions);
+		window.open("evaluation.html", 'evaluation', popupOptions);
 	});
 }
 // 교강사 이미지 가져오기
 function getImage(){
-	$(".picture").append("<img src='man.png' />");
+	$(".picture").append("<img src='../images/man.png' />");
 }
 
 // 교강사명 및 강의명 가져오기
