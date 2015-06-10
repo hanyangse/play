@@ -1,0 +1,49 @@
+body {
+  width : 880px;
+  margin : auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header {
+	height : 25px;
+	background-color: red;
+	padding : 5px;
+	overflow: hidden;
+}
+header > form{
+	float:left;
+}
+header > div{
+	float:right;
+}
+section {
+	text-align: center;
+	background-color:green;
+	padding: 10px;
+	margin:auto;
+}
+section > article{
+	margin:auto;
+	background:#00B7FF;
+	width : 75%;
+	padding:10px;
+}
+table{
+	background-color: white;
+	width: 45%;
+	margin:auto;
+}
+footer {
+	height : 25px;
+	background-color: blue;
+	text-align: center;
+	clear : both;
+	padding : 10px;
+}
+
+
+

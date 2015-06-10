@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>한양대 강의평가 서비스</title>
+    <link rel='stylesheet' href='/stylesheets/signup.css' />
+    <script charset="UTF-8" type="text/javascript" src="javascript/jquery-2.1.4.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="javascript/signup.js"></script>
+  </head>
+  <body>
+  	<header>
+  		<form action="search_by_anykeyword" method="post">
+  			<img id="logo" src="" alt="logo_image"/>
+  		</form>
+  		
+  	</header>
+  	<section>
+  		<article id="sign_up">
+  			<h1>회원 가입</h1>
+  			<form action="signup_submit" method="post">
+  				<table>
+  					<tr>
+  						<td>학번 : </td>
+  						<td><input type="text" name="studentid" id="studentid"/></td>
+              
+  					</tr>
+  					<tr>
+  						<td>비밀번호 : </td>
+  						<td><input type="password" id="password" name="password"/></td>
+  					</tr>
+  					<tr>
+  						<td>비밀번호 확인: </td>
+  						<td><input type="password" id="password_confirm"/></td>
+  					</tr>
+  				</table>
+  				<input type="submit" value="등록하기" />
+  			</form>
+  			<hr />
+  			<hr />
+  			<h1>한양대 이메일이 있다면?</h1>
+  			<input type="button" value="한양데 이메일로 가입하기"/>
+  		</article>
+  	</section>
+    <footer>
+    	footer
+    </footer>
+  </body>
+</html>
