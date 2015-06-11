@@ -29,7 +29,8 @@ section {
 	padding: 10px;
 	margin:auto;
 }
-section > article{
+section > #sign_in{
+	display: block;
 	margin:auto;
 	background-color: rgba(0,0,0,0.6);
 	color: white; 
@@ -63,11 +64,11 @@ article p:nth-child(3){
 	width: 380px;
 	text-align: right;
 }
-article p:nth-child(6){
+article p:nth-child(5){
 	font-size: 15px;
 	text-align: right;
 }
-article p:nth-child(6) a{
+article p:nth-child(5) a{
 	color: white;
 }
 article	form{
@@ -104,5 +105,17 @@ footer {
 	padding : 10px;
 }
 
+#sign_up {
+	display: none;
+	margin:auto;
+	background-color: rgba(0,0,0,0.6);
+	color: white; 
+	width : 500px;
+	height: 550px;
+	padding:10px;
+	position: absolute;
+	top: 70px;
+	left: 700px;
+}
 
 
