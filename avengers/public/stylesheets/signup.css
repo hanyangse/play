@@ -9,8 +9,8 @@ a {
 }
 
 header {
-	height : 60px;
-	background-color: red;
+	height : 50px;
+	background-color: rgb(134,35,34);
 	padding : 5px;
 	overflow: hidden;
 }
@@ -22,6 +22,8 @@ header > div{
 }
 /*section part*/
 section {
+	background-image: url("images/로그인배경.JPG");
+	background-size: cover;
 	height : 650px;
 	background-color:green;
 	padding: 10px;
@@ -29,7 +31,7 @@ section {
 }
 section > article{
 	margin:auto;
-	background-color: rgba(0,0,0,0.65);
+	background-color: rgba(0,0,0,0.6);
 	color: white; 
 	width : 500px;
 	height: 300px;
@@ -96,7 +98,7 @@ table{
 }
 footer {
 	height : 35px;
-	background-color: blue;
+	background-color: rgb(50,14,25);
 	text-align: center;
 	clear : both;
 	padding : 10px;
