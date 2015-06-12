@@ -14,8 +14,8 @@ var app = express();
 var connection = mysql.createConnection({
 	host : 'localhost',
 	port : 3306,
-	user : 'root',
-	password : 'root',
+	user : 'softcone',
+	password : 'softcone1',
 	database : 'sese'
 });
 
