@@ -4,7 +4,9 @@
 			<img src="/images/logo.svg" alt="logo">
 		</div>
 		<div id="search">
-			<input type="text" placeholder="통합검색" autocorrect="off" autocomplete="off" spellcheck="false">
+			<form action="search" method="post">
+				<input type="text" name="keyword" placeholder="통합검색" autocorrect="off" autocomplete="off" spellcheck="false">
+			</form>
 		</div>
 		<div id="login_info">
 			<form action="logout" method="post">
