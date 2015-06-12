@@ -1,0 +1,16 @@
+.card {
+	background-color: #fff;
+	overflow: auto;
+	margin-bottom: 5px;
+	border: solid 1px #ccc;
+}
+.card > div{
+	float: left;
+
+}
+.photo img {
+	border-right: dotted 3px #aaa;
+}
+.info {
+	display: inline-block;
+}

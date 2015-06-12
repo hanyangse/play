@@ -1,13 +1,12 @@
 #sample{
 	height: 3000px;
 }
-.content{
-	margin-top: 72px;
-}
+
 
 #simpleSearch{
 	height: 300px;
 	text-align: center;
+	background-color: rgba(1,1,1,0.3);
 }
 
 #simpleSearch:before{
@@ -49,7 +48,7 @@ button.category:hover {
 
 #wall{
 	width: 1%;
-	background-color: black;
+	background-color: rgba(0,0,0,0);
 }
 
 #leftCol {
@@ -130,16 +129,11 @@ input.searchForm:focus{
 .tabs > DIV {
 	/*border-top: 1px solid #c7c7c7*/
 	margin-top: 10px;
-	background: #ddd !important;
+	background: #fff !important;
 	/*border-bottom: 4px solid #E95855 !important;*/
 	margin-left: 40px;
 	margin-right: 40px;
 }
-
-.tab{
-	background-color: #ddd;
-}
-
 
 
 .tabs > DIV SPAN {
@@ -262,18 +256,3 @@ input.searchForm:focus{
 	border-bottom-color: #68a697;
 }
 
-.card {
-	background-color: #fff;
-	overflow: auto;
-	margin-bottom: 5px;
-}
-.card > div{
-	float: left;
-
-}
-.photo img {
-	border-right: dotted 3px #aaa;
-}
-.info {
-	display: inline-block;
-}

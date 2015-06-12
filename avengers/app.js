@@ -56,6 +56,20 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 //app.get('/users', user.list);
 
+app.get('/search',function(req, res, next) {
+	res.render('search', 
+		{
+			title: 'HECE 검색결과',
+			email: req.body.email || sample@email.com,
+			cards: [
+				{courseName: '가로 시작하는 단어', profName:'홍길동', photo: '/images/man.png'},
+				{courseName: '나로 시작하는 단어', profName:'길동이', photo: '/images/man.png'},
+				{courseName: '다로 시작하는 단어', profName:'동동동이', photo: '/images/man.png'},
+				{courseName: '라로 시작하는 단어', profName:'홍수빈', photo: '/images/man.png'},
+			]
+		});
+	//res.render('index', { title: 'Express' });
+});
 app.post('/signup', user.signup);
 
 app.post('/signup_submit',function(req,res){
