@@ -59,7 +59,7 @@ app.get('/', routes.index);
 app.post('/signup', user.signup);
 
 app.post('/signup_submit',function(req,res){
-	var user = {'studentid':req.body.studentid,'password':req.body.password};
+	var user = {'email':req.body.email, 'studentid':req.body.studentid,'password':req.body.password};
 	var query = connection.query('insert into user set ?', user,function(err,result){
 		if(err){
 			console.error(err);
