@@ -212,8 +212,7 @@ app.post('/signin_submit',function(req,res){
 							teamplay: result[i]['teamplay']
 						};
 					}
-				});
-				var query = connection.query("select * from totalv order by fun desc limit 10 ",function(err,result){
+					var query = connection.query("select * from totalv order by fun desc limit 10 ",function(err,result){
 					if(err){
 						console.log(err);
 						return err;
@@ -235,9 +234,7 @@ app.post('/signin_submit',function(req,res){
 							teamplay: result[i]['teamplay']
 						};
 					}
-				});
-
-				var query = connection.query("select * from totalv order by grade desc limit 10 ",function(err,result){
+					var query = connection.query("select * from totalv order by grade desc limit 10 ",function(err,result){
 					if(err){
 						console.log(err);
 						return err;
@@ -259,9 +256,7 @@ app.post('/signin_submit',function(req,res){
 							teamplay: result[i]['teamplay']
 						};
 					}
-				});
-
-				var query = connection.query("select * from totalv order by benefit desc limit 10 ",function(err,result){
+					var query = connection.query("select * from totalv order by benefit desc limit 10 ",function(err,result){
 					if(err){
 						console.log(err);
 						return err;
@@ -283,17 +278,18 @@ app.post('/signin_submit',function(req,res){
 							teamplay: result[i]['teamplay']
 						};
 					}
+					req.session.email = user.email;
+					res.render('main.ejs',{
+						 'email':user.email,
+						 'totCards': totCards,
+						 'funCards': funCards,
+						 'gradeCards': gradeCards,
+						 'benefitCards': benefitCards,
+						});	
 				});
-
-				req.session.email = user.email;
-				res.render('main.ejs',{
-					 'email':user.email,
-					 'totCards': totCards,
-					 'funCards': funCards,
-					 'gradeCards': gradeCards,
-					 'benefitCards': benefitCards,
-					});		
-
+				});
+				});
+				});
 				
 				console.log("routes.index");
 			}else{

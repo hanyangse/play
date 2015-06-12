@@ -29,7 +29,7 @@ CREATE TABLE `course` (
   `credits` int(11) NOT NULL,
   `department` varchar(45) NOT NULL,
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
+) ENGINE=InnoDB DEFAULT CHARSET utf8 collate utf8_general_ci;;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `evaluation` (
   KEY `code_idx` (`code`),
   CONSTRAINT `code` FOREIGN KEY (`code`) REFERENCES `course` (`code`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `email` FOREIGN KEY (`email`) REFERENCES `user` (`email`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
+) ENGINE=InnoDB DEFAULT CHARSET utf8 collate utf8_general_ci;;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `evaluation` (
 
 LOCK TABLES `evaluation` WRITE;
 /*!40000 ALTER TABLE `evaluation` DISABLE KEYS */;
-INSERT INTO `evaluation` VALUES ('espy0117@gmail.com','22071',2014,1,4,2,2,3,3,5,'?? ?? ?????','2015-06-12 16:36:18'),('espy0117@gmail.com','22079',2014,1,4,2,2,5,3,5,'??? ?? ??? ?? ?? ????','2015-06-12 16:36:18'),('jht@gmail.com','22071',2015,1,4,2,3,2,2,5,'perfect!','2015-06-12 16:36:18'),('kbs@gmail.com','22071',2015,1,3,2,3,1,5,5,'perfect!','2015-06-12 16:36:18'),('kht@gmail.com','22071',2015,3,4,4,3,2,2,5,'I hate it!','2015-06-12 16:36:18'),('kht@gmail.com','22079',2015,3,4,4,3,4,2,5,'tire, too many team project and difficulty is hell','2015-06-12 16:36:18'),('leehw8808@gmail.com','22071',2015,1,3,3,5,5,3,5,NULL,'2015-06-12 16:36:18'),('lsy@gmail.com','22071',2015,1,5,5,5,2,5,5,'???? ?????? ??? ? ?????? ??','2015-06-12 16:36:18'),('red@gmail.com','22071',2015,1,5,5,5,1,5,5,'It is best course for CS','2015-06-12 16:36:18'),('red@gmail.com','22079',2015,5,1,2,5,4,2,5,'So easy to me','2015-06-12 16:36:18');
+INSERT INTO `evaluation` VALUES ('espy0117@gmail.com','22071',2014,1,4,2,2,3,3,5,'이 수업 정말로 좋아요!! 짱짱맨','2015-06-12 16:36:18'),('espy0117@gmail.com','22079',2014,1,4,2,2,5,3,5,'수업 들으면서 정말 후회없고 교수님 너무 멋있어요','2015-06-12 16:36:18'),('jht@gmail.com','22071',2015,1,4,2,3,2,2,5,'이거 좀 짱인듯!','2015-06-12 16:36:18'),('kbs@gmail.com','22071',2015,1,3,2,3,1,5,5,'perfect! it is good~~','2015-06-12 16:36:18'),('kht@gmail.com','22071',2015,3,4,4,3,2,2,5,'I hate it!','2015-06-12 16:36:18'),('kht@gmail.com','22079',2015,3,4,4,3,4,2,5,'tire, too many team project and difficulty is hell','2015-06-12 16:36:18'),('leehw8808@gmail.com','22071',2015,1,3,3,5,5,3,5,NULL,'2015-06-12 16:36:18'),('lsy@gmail.com','22071',2015,1,5,5,5,2,5,5,'완전 어렵고 짜증나고ㅠㅠㅠ 미치겠구망','2015-06-12 16:36:18'),('red@gmail.com','22071',2015,1,5,5,5,1,5,5,'It is best course for CS','2015-06-12 16:36:18'),('red@gmail.com','22079',2015,5,1,2,5,4,2,5,'So easy to me','2015-06-12 16:36:18');
 /*!40000 ALTER TABLE `evaluation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +114,7 @@ CREATE TABLE `user` (
   `studentid` int(11) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
+) ENGINE=InnoDB DEFAULT CHARSET utf8 collate utf8_general_ci;;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
