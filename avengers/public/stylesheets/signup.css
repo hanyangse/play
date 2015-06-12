@@ -36,10 +36,10 @@ section > #sign_in{
 	background-color: rgba(0,0,0,0.6);
 	color: white; 
 	width : 500px;
-	height: 300px;
+	height: 400px;
 	padding:10px;
 	position: absolute;
-	top: 200px;
+	top: 150px;
 	left: 60px;
 }
 article h1{
@@ -61,6 +61,13 @@ article p{
 	font-size: 20px;
 	margin-bottom: 30px;
 }
+
+article form input[type=submit]{
+	background-color: purple;
+	color: white;
+	border: 0px;
+}
+/*
 article p:nth-child(3){
 	width: 380px;
 	text-align: right;
@@ -72,19 +79,21 @@ article p:nth-child(5){
 article p:nth-child(5) a{
 	color: white;
 }
+*/
 article	form{
 	text-align: center;
 }
 article form input{
 	display: inline;
 	margin-right: 10px;
-	width: 180px;
-	height: 20px;
+	width: 250px;
+	height: 30px;
 	border-radius: 5px;
 	color: rgba(0,0,0,0.3);
+	margin-top: 10px;
 }
 
-
+/*
 article form input:nth-child(3){
 	background-color: purple;
 	width: 60px;
@@ -93,6 +102,7 @@ article form input:nth-child(3){
 	border: 0px;
 
 }
+*/
 table{
 	background-color: white;
 	width: 45%;
