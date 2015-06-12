@@ -14,11 +14,11 @@
 	<div class="content">
 		<div class="professor_info">
 			<div class="picture">
-				<img src='<%= img %>' />
+				<img src=<%= card.photo %> />
 			</div>
 			<div class="info">
-				<p class='professor'><%= card.professor %></p>
-				<p class='course'><%= card.course %></p>
+				<p class='professor'><%= card.profName %></p>
+				<p class='course'><%= card.courseName %></p>
 			</div>
 			<div class="graph">
 				<canvas id="hexagon"></canvas>
@@ -43,5 +43,6 @@
 			<%}%>
 		</div>
 	</div>
+
 </body>
 </html>

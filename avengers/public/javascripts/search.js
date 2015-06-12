@@ -37,21 +37,29 @@ $(function(){
 	});
 	
 	$('.card').on('click', function(event) {
-		$.ajax({
+		/*$.ajax({
 			url: '/view',
 			type: 'post',
 			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
 			data: { code: $(this).children('input').val()},
 		})
-		.done(function() {
+		.done(function(msg) {
+			alert(msg);
+			console.log(msg);
+			$(".content").html(msg);
 			console.log("success");
 		})
 		.fail(function() {
+			alert("fail");
 			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
+		});*/
+		var codeEle = $(this).children('input');
+		var temp_form = $("form");
+		temp_form.append(codeEle);
+		temp_form.attr("action","view");
+		temp_form.attr("method","post");
+		temp_form.submit();
+
 		
 	});
 });

@@ -51,18 +51,18 @@ app.post('/view', function(req, res){
 			return err;
 		}
 		var card = {
-			courseName : result[0].title,
-			profName : result[0].professor,
-			code : result[0].code,
-			credit : result[0].credits,
-			department : result[0].department,
+			courseName : result[0]['title'],
+			profName : result[0]['professor'],
+			code : result[0]['code'],
+			credit : result[0]['credits'],
+			department : result[0]['department'],
 			photo: '/images/man.png',
-			fun: result[0].avg(fun),
-			grade: result[0].avg(grade),
-			benefit: result[0].avg(benefit),
-			homework: result[0].avg(homework),
-			difficulty: result[0].avg(difficulty),
-			teamplay: result[0].avg(teamplay)
+			fun: result[0]['avg(fun)'],
+			grade: result[0]['avg(grade)'],
+			benefit: result[0]['avg(benefit)'],
+			homework: result[0]['avg(homework)'],
+			difficulty: result[0]['avg(difficulty)'],
+			teamplay: result[0]['avg(teamplay)']
 		};
 		
 		var query = connection.query("select * from evaluation where code="+ code,function(err,result){
@@ -79,7 +79,8 @@ app.post('/view', function(req, res){
 				};
 
 			}
-			res.render('view', 
+			//res.send(200, 'success');
+			res.render('view.ejs', 
 			{
 				'title': 'HECE 검색결과',
 				'email': req.session.email,
@@ -187,7 +188,7 @@ app.post('/signin_submit',function(req,res){
 			if(user.password==rows[0].password){
 				//req.session.studentid = rows[0].studentid;
 				req.session.email = user.email;
-				res.render('index.ejs',{
+				res.render('main.ejs',{
 					//'studentid':rows[0].studentid,
 					 'email':user.email});		
 
