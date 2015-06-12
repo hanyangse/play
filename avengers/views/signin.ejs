@@ -3,16 +3,22 @@
   <head>
     <title>한양대 강의평가 서비스</title>
     <link rel='stylesheet' href='/stylesheets/signup.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
+
     <script charset="UTF-8" type="text/javascript" src="javascript/jquery-2.1.4.js"></script>
     <script charset="UTF-8" type="text/javascript" src="javascript/signin.js"></script>
   </head>
   <body>
+
   	<header>
   		<form action="search_by_anykeyword" method="post">
   			<img id="logo" src="" alt="logo_image"/>
   		</form>
   		
   	</header>
+
+    
+
   	<section>
 
   		<article id="sign_in">
@@ -30,8 +36,9 @@
         
       
 			  
-        <p><a href="#">Lost your password?</a></p>
-        <button id="to_signup">where</button> 
+        <p><a href="#">Lost your password?</a><a href="#" id="to_signup">Sign Up</a></p>
+        
+        <!--<button id="to_signup">where</button> -->
   		</article>
 
 
@@ -47,8 +54,8 @@
           <input type="submit" value="Sign Up" />       
         </form>
         
-        <p><a href="#">Lost your password?</a></p>
-        <button id="to_signin">toSignIn</button> 
+        <p><a href="#">Lost your password?</a><a href="#" id="to_signin">Sign In</a></p>
+        <!--<button id="to_signin">toSignIn</button> -->
       </article>
   	</section>
     <footer>

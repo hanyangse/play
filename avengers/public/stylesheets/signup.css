@@ -61,6 +61,11 @@ article p{
 	font-size: 20px;
 	margin-bottom: 30px;
 }
+article p > #to_signup, #to_signin{
+	float : right;
+
+}
+
 
 article form input[type=submit]{
 	background-color: purple;
