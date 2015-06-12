@@ -1,6 +1,4 @@
 
-
-
 $(function(){
 	$("#studentid").focusout(function(){
 		

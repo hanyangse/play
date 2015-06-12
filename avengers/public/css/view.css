@@ -1,0 +1,83 @@
+body, html{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+.professor_info{
+	width: 90%;
+	height: 30%;
+	margin: 5%;
+}
+.professor_info .picture{
+	float: left;
+	width: 20%;
+	height: 100%;
+	margin-right: 2%;
+}
+.professor_info .picture img{
+	width: 100%;
+	height: 100%;
+}
+.professor_info .info{
+	float: left;
+	width: 30%;
+	height: 100%;
+	margin-right: 2%;
+}
+.professor_info .info .professor{
+	line-height: 50px;
+	color: #c3c3c3;
+	font-size: 1.5em;
+}
+.professor_info .info .course{
+	line-height: 20px;
+}
+.professor_info .evaluation{
+	float: left;
+	width: 46%;
+	height: 100%;
+}
+.professor_info .evaluation .graph{
+	width: 90%;
+	height: 100%;
+	margin: 10px;
+}
+.professor_info .evaluation .graph .hexagon{
+	width: 100%;
+	height: 100%;
+}
+.professor_info .evaluation .evalButton{
+	float: left;
+	display: inline-block;
+	color: red;
+	cursor: pointer;
+}
+.comments{
+	width: 100%;
+	height: 60%;
+	border-top: 1px solid #c3c3c3;
+}
+.comments .comment_div{
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+	border-bottom: 1px solid #c3c3c3;
+}
+.comments .comment_div .comment_id{
+	font-weight: bold;
+}
+.comments .comment_div .comment{
+	word-wrap: break-word;
+	word-break: break-all;
+}
+/*
+#board{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	height: 60%;
+}
+#board object{
+	width: 100%;
+	height: 100%;
+}*/

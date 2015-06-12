@@ -40,13 +40,18 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+// view.html 확인용 임시
+app.get('/view', function(req, res){
+	console.log()
+  	res.sendfile('public/view.html');
+});
 
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+
 
 app.get('/', routes.index);
 //app.get('/users', user.list);
@@ -69,15 +74,19 @@ app.post('/signup_submit',function(req,res){
 });
 
 app.post('/signin_submit',function(req,res){ 
+
 	var user = {'email':req.body.email, 'password':req.body.password};
 	var query = connection.query("select password from user where email='"+user.email+"'",function(err,rows){
+
 		//console.log(rows);
 		//console.log("user.password"+user.password);
 		//console.log("rows.password"+rows[0].password);
 		if(rows.length != 0){
 			if(user.password==rows[0].password){
+
 				req.session.email = user.email;
 				res.render('index.ejs',{studentid:user.email});		
+
 				
 				console.log("routes.index");
 			}else{
@@ -113,8 +122,6 @@ app.post('/logout',function(req,res){
 	req.session.studentid=undefined;
 	res.render('signin.ejs');
 });
-
-
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
