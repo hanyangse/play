@@ -31,8 +31,8 @@ $(function() {
 
 function setStar(){
     $(".grade_star").raty({
-        starOff  : "../images/star-off.png",
-        starOn   : "../images/star-on.png",
+        starOff  : "images/star-off.png",
+        starOn   : "images/star-on.png",
         hints: ["bad","poor","regular","good","gorgeous"],
         click: function(score, evt) {
           console.log("grade score: "+score);
@@ -40,8 +40,8 @@ function setStar(){
         }
     });
     $(".interest_star").raty({
-        starOff  : "../images/star-off.png",
-        starOn   : "../images/star-on.png",
+        starOff  : "images/star-off.png",
+        starOn   : "images/star-on.png",
         hints: ["bad","poor","regular","good","gorgeous"],
         click: function(score, evt) {
           console.log("interesting score: "+score);
@@ -49,8 +49,8 @@ function setStar(){
         }
     });
     $(".benefit_star").raty({
-        starOff  : "../images/star-off.png",
-        starOn   : "../images/star-on.png",
+        starOff  : "images/star-off.png",
+        starOn   : "images/star-on.png",
         hints: ["bad","poor","regular","good","gorgeous"],
         click: function(score, evt) {
           console.log("benefit score: "+score);
@@ -58,8 +58,8 @@ function setStar(){
         }
     });
     $(".assign_star").raty({
-        starOff  : "../images/star-off.png",
-        starOn   : "../images/star-on.png",
+        starOff  : "images/star-off.png",
+        starOn   : "images/star-on.png",
         hints: ["a lot less","less","regular","many","too many"],
         click: function(score, evt) {
           console.log("assignment score: "+score);
@@ -67,8 +67,8 @@ function setStar(){
         }
     });
     $(".teamprj_star").raty({
-        starOff  : "../images/star-off.png",
-        starOn   : "../images/star-on.png",
+        starOff  : "images/star-off.png",
+        starOn   : "images/star-on.png",
         hints: ["a lot less","less","regular","many","too many"],
         click: function(score, evt) {
           console.log("teamproject score: "+score);
@@ -76,8 +76,8 @@ function setStar(){
         }
     });
     $(".difficult_star").raty({
-        starOff  : "../images/star-off.png",
-        starOn   : "../images/star-on.png",
+        starOff  : "images/star-off.png",
+        starOn   : "images/star-on.png",
         hints: ["too easy","easy","regular","difficult","very difficult"],
         click: function(score, evt) {
           console.log("difficulty score: "+score);
