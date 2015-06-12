@@ -1,49 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>한양대 강의평가 서비스</title>
-    <link rel='stylesheet' href='/stylesheets/index.css' />
-    <script charset="UTF-8" type="text/javascript" src="javascript/jquery-2.1.4.js"></script>
-    <script charset="UTF-8" type="text/javascript" src="javascript/index.js"></script>
+    <title>한양대 강의평가 시스템</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+
+    <script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
   </head>
   <body>
-  	<header>
-  		<form action="search_by_anykeyword" method="post">
-  			<img id="logo" src="" alt="logo_image"/>
-  			<input type="text" name="anykeyword" placeholder="교강사 또는 강의명 입력" id="anykeyword" min="20" size="25"/>
-  			<input type="submit" id="submit_anykeyword" value="검색"/>
-  		</form>
-  		<div>
-  			<span id="user_name_after_login"><%=studentid%>님</span>
-        <form action="logout" method="post">
-    			<input id="logout" type="submit" value="로그아웃" />	
-        </form>
-  		</div>
-  	</header>
-  	<section>
-  		<div>
-  			<input type="button" value="교강사 검색"/>
-  			<input type="button" value="강의명 검색"/>	
-  		</div>
-  		<article id="left_article">
-  			<em>추천 랭킹</em>
-  			<input type="radio" name="order_criteria" value="everage"/>총점
-  			<input type="radio" name="order_criteria" value="fun"/>재미
-  			<input type="radio" name="order_criteria" value="grade"/>학점
-  			<input type="radio" name="order_criteria" value="benefit"/>유익
-  			<div class="course_list">
-  				
-  			</div>
-  		</article>
-  		<article id="right_article">
-  			<em>최신순</em>
-  			<div class="course_list">
-  				
-  			</div>
-  		</article>
-  	</section>
-    <footer>
-    	footer
-    </footer>
+
+    <% include header.ejs %>
+
+    <section class="content">
+      <div id="simpleSearch">
+      <div id="select"><span>다음으로 찾기</span></div>
+      <div class="searchButton">
+        <button class="category" id="prof">교강사</button>
+        <button class="category" id="course">강의명</button>
+      </div>
+      <div class="searchBox" id="profForm">
+        <input class="searchForm" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
+        <button class="searchForm profBtn">찾기</button>
+        <button class="searchCancel">뒤로가기</button>
+      </div>
+      <div class="searchBox" id="courseForm">
+        <input class="searchForm" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
+        <button class="searchForm courseBtn">찾기</button>
+        <button class="searchCancel">뒤로가기</button>
+      </div>
+    </div>
+    <div id="view">
+      <div class="column" id="leftCol">
+        <em>추천랭킹</em>
+        <div class='tabs'>
+            <ul>
+                <li><a href="#tab-1">총점</a></li>
+                <li><a href="#tab-2">재미</a></li>
+                <li><a href="#tab-3">학점</a></li>
+                <li><a href="#tab-4">유익</a></li>
+            </ul>
+            <div class="tab" id='tab-1'><span>안녕1</span></div>
+            <div class="tab" id='tab-2'>
+              <div class="card">
+                <div class="photo"><img src="/images/man.png"></div>
+                <div class="info">
+                  <div class="name">
+                    <p>소프트웨어공학</p>
+                    <p>Scott Uk-Jin Lee</p>
+                  </div>
+                  <div class="graph"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="photo"><img src="/images/man.png"></div>
+                <div class="info">
+                  <div class="name">
+                    <p>소프트웨어공학</p>
+                    <p>Scott Uk-Jin Lee</p>
+                  </div>
+                  <div class="graph"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="photo"><img src="/images/man.png"></div>
+                <div class="info">
+                  <div class="name">
+                    <p>소프트웨어공학</p>
+                    <p>Scott Uk-Jin Lee</p>
+                  </div>
+                  <div class="graph"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab" id='tab-3'><span>안녕3</span></div>
+            <div class="tab" id='tab-4'><span>안녕4</span></div>
+        </div>
+      </div>
+      <div class="column" id="wall"></div>
+      <div class="column" id="rightCol"></div>
+    </div>
+    </section>
   </body>
 </html>
