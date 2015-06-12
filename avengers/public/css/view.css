@@ -6,7 +6,7 @@ body, html{
 .professor_info{
 	width: 90%;
 	height: 30%;
-	margin: 5%;
+	margin: 3% 5%;
 }
 .professor_info .picture{
 	float: left;
@@ -19,20 +19,42 @@ body, html{
 	height: 100%;
 }
 .professor_info .info{
+	position: relative;
 	float: left;
 	width: 30%;
 	height: 100%;
 	margin-right: 2%;
 }
 .professor_info .info .professor{
-	line-height: 50px;
-	color: #c3c3c3;
+	line-height: 30px;
+	color: #999;
 	font-size: 1.5em;
 }
 .professor_info .info .course{
 	line-height: 20px;
 }
-.professor_info .evaluation{
+
+.professor_info .info .evalButton{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: inline-block;
+	color: red;
+	cursor: pointer;
+}
+.professor_info .graph{
+	float: left;
+	width: 46%;
+	height: 100%;
+}
+.professor_info .graph .hexagon{
+	width: 100%;
+	height: 100%;
+}
+.professor_info .graph .values{
+	visibility: hidden;
+}
+/*.professor_info .evaluation{
 	float: left;
 	width: 46%;
 	height: 100%;
@@ -51,7 +73,7 @@ body, html{
 	display: inline-block;
 	color: red;
 	cursor: pointer;
-}
+}*/
 .comments{
 	width: 100%;
 	height: 60%;

@@ -11,16 +11,27 @@
 </head>
 <body>
 	<div class="professor_info">
-		<div class="picture"></div>
-		<div class="info"></div>
-		<div class="evaluation">
-			<div class="graph">
-				<canvas id="hexagon"></canvas>
-			</div>
+		<div class="picture">
+			<img src='<%= img %>' />
+		</div>
+		<div class="info">
+			<p class='professor'><%= professor %></p>
+			<p class='course'><%= course %></p>
 			<div class="evalButton">평가</div>
+		</div>
+		<div class="graph">
+			<canvas id="hexagon"></canvas>
+			<div class="values"><%= values %></div>
 		</div>
 	</div>
 	<!-- <div id="board"></div>-->
-	<div class="comments"></div>
+	<div class="comments">
+		<%for(var i=0; i<comments.length; i++){%>
+			<div class="comment_div">
+				<div class="comment_id"><%= comments[i].userId %></div>
+				<div class="comment"><%= comments[i].comment %></div>
+			</div>
+		<%}%>
+	</div>
 </body>
 </html>

@@ -13,10 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/evaluation.css">
 </head>
 <body>
-	<form>
+	<form action ="/test" method="post">
 	<div class="year_sem">
-		<select class="year"></select>
-		<select class="semester"></select>	
+		<select name="year" class="year"></select>
+		<select name="semester" class="semester"></select>	
 	</div>
 
 	<div class="star">
@@ -54,7 +54,7 @@
 	
 	<div class="makeComment">
 		<p>comment</p>
-		<textarea class="comment"></textarea>
+		<textarea name ="comment" class="comment"></textarea>
 	</div>
 	
 	<div class="alert"></div>

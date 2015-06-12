@@ -4,8 +4,9 @@ $(function() {
     setSemester();
      
     $("form").submit(function(){
+        /*
         if($("input[name='grade']").val()==""||$("input[name='interesting']").val()==""||$("input[name='benefit']").val()==""
-          ||$("input[name='assigment']").val()==""||$("input[name='teamproject']").val()==""||$("input[name='difficulty']").val()==""){
+          ||$("input[name='assignment']").val()==""||$("input[name='teamproject']").val()==""||$("input[name='difficulty']").val()==""){
             $(".alert").empty();
             $(".alert").append("<p>모든 항목을 평가해주세요.</p>")
             return false;
@@ -20,11 +21,11 @@ $(function() {
             if(retVal == true)  return true;
             else  return false;
         }
-        else{
+        else{*/
             var retVal = confirm("이대로 평가하시겠습니까?");
             if(retVal == true)  return true;
             else  return false;
-        }
+        //}
     });
 });
 
@@ -61,8 +62,8 @@ function setStar(){
         starOn   : "../images/star-on.png",
         hints: ["a lot less","less","regular","many","too many"],
         click: function(score, evt) {
-          console.log("assigment score: "+score);
-          $("input[name=assigment]").val(score);
+          console.log("assignment score: "+score);
+          $("input[name=assignment]").val(score);
         }
     });
     $(".teamprj_star").raty({

@@ -40,16 +40,30 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req, res){
-	console.log()
-  	res.sendfile('public/view.html');
+app.get('/view', function(req, res){
+	res.render('view.ejs',{
+		img: "/images/man.png",
+		professor: "Scott Uk-jin Lee",
+		course: "Software Engineering",
+		values: [65,59,27,19,96,90],
+		comments: [
+			{userId:"a",comment:"!"},
+			{userId:"b",comment:"@"},
+			{userId:"c",comment:"#"},
+			{userId:"d",comment:"$"},
+			{userId:"e",comment:"%"}
+		]
+	});
 });
-
+app.post('/test',function(req,res){
+	console.log("test start");
+	console.log(req.body);
+});
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-/*
+
 app.get('/', routes.index);
 //app.get('/users', user.list);
 
@@ -115,7 +129,7 @@ app.post('/logout',function(req,res){
 	req.session.studentid=undefined;
 	res.render('signin.ejs');
 });
-*/
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
