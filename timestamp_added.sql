@@ -29,7 +29,7 @@ CREATE TABLE `course` (
   `credits` int(11) NOT NULL,
   `department` varchar(45) NOT NULL,
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `evaluation` (
   KEY `code_idx` (`code`),
   CONSTRAINT `code` FOREIGN KEY (`code`) REFERENCES `course` (`code`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `email` FOREIGN KEY (`email`) REFERENCES `user` (`email`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,7 +114,7 @@ CREATE TABLE `user` (
   `studentid` int(11) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
