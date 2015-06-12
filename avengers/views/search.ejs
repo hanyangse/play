@@ -9,7 +9,7 @@
 
 		<script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
-		<script type="text/javascript" src="/javascripts/main.js"></script>
+		<script type="text/javascript" src="/javascripts/search.js"></script>
 	</head>
 <body>
 
@@ -20,6 +20,8 @@
 		<%
 		for (var i = 0; i < cards.length; i++) { %>
 			<div class="card">
+				<input type="hidden" name="code" value=<%= cards[i].code %> />
+
 	    		<div class="photo"><img src='<%- cards[i].photo %>'></div>
 	    		<div class="info">
 	    			<div class="name">

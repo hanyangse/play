@@ -42,20 +42,30 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // view.html 확인용 임시
-app.get('/view', function(req, res){
-	res.render('view.ejs',{
-		img: "/images/man.png",
-		professor: "Scott Uk-jin Lee",
-		course: "Software Engineering",
-		values: [65,59,27,19,96,90],
-		comments: [
-			{userId:"a",comment:"!"},
-			{userId:"b",comment:"@"},
-			{userId:"c",comment:"#"},
-			{userId:"d",comment:"$"},
-			{userId:"e",comment:"%"}
-		]
+app.post('/view', function(req, res){
+	var code = req.body.code;
+	console.log(code+": code !!!!");
+	var query = connection.query("select * from total where code="+ code,function(err,result){
+
+		
+
+		/*res.render('view.ejs',{
+			
+			img: "/images/man.png",
+			professor: "Scott Uk-jin Lee",
+			course: "Software Engineering",
+			values: [65,59,27,19,96,90],
+			comments: [
+				{userId:"a",comment:"!"},
+				{userId:"b",comment:"@"},
+				{userId:"c",comment:"#"},
+				{userId:"d",comment:"$"},
+				{userId:"e",comment:"%"}
+			]
+		});	*/
 	});
+	console.log(query);
+	
 });
 app.post('/test',function(req,res){
 	console.log("test start");
@@ -88,7 +98,7 @@ app.post('/search',function(req, res, next) {
 			cards[i] = {courseName : result[i].title,
 						profName : result[i].professor,
 						code : result[i].code,
-						credit : result[i].grade,
+						credit : result[i].credits,
 						department : result[i].department,
 						photo: '/images/man.png'};
 		}
