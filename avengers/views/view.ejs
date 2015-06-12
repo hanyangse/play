@@ -4,9 +4,8 @@
 	<meta charset="UTF-8">
 	<script src="http://code.jquery.com/jquery-2.1.3.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/view.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
-	<!--<script type="text/javascript" src="../js/Chart.Line.js"></script>
-	<script type="text/javascript" src="../js/Chart.Radar.js"></script>-->
 	<script type="text/javascript" src="../js/Chart.js"></script>
 	<script type="text/javascript" src="../js/view.js"></script>
 </head>
@@ -20,14 +19,15 @@
 			<div class="info">
 				<p class='professor'><%= professor %></p>
 				<p class='course'><%= course %></p>
-				<div class="evalButton">평가</div>
 			</div>
 			<div class="graph">
 				<canvas id="hexagon"></canvas>
 				<div class="values"><%= values %></div>
 			</div>
 		</div>
+		<p class="evalButton">평가</p>
 		<!-- <div id="board"></div>-->
+		<p class="comment_p">Comments</p>
 		<div class="comments">
 			<%for(var i=0; i<comments.length; i++){%>
 				<div class="comment_div">

@@ -1,12 +1,19 @@
-body, html{
+html{
 	width: 100%;
 	height: 100%;
 	margin: 0;
 }
+body{
+	max-width: 1000px;
+	width: 80%;
+	margin: auto;
+}
 .professor_info{
 	width: 90%;
 	height: 30%;
+	min-height: 200px;
 	margin: 3% 5%;
+	display: inline-block;
 }
 .professor_info .picture{
 	float: left;
@@ -19,7 +26,6 @@ body, html{
 	height: 100%;
 }
 .professor_info .info{
-	position: relative;
 	float: left;
 	width: 30%;
 	height: 100%;
@@ -34,14 +40,6 @@ body, html{
 	line-height: 20px;
 }
 
-.professor_info .info .evalButton{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	display: inline-block;
-	color: red;
-	cursor: pointer;
-}
 .professor_info .graph{
 	float: left;
 	width: 46%;
@@ -54,26 +52,29 @@ body, html{
 .professor_info .graph .values{
 	visibility: hidden;
 }
-/*.professor_info .evaluation{
-	float: left;
-	width: 46%;
-	height: 100%;
-}
-.professor_info .evaluation .graph{
-	width: 90%;
-	height: 100%;
-	margin: 10px;
-}
-.professor_info .evaluation .graph .hexagon{
-	width: 100%;
-	height: 100%;
-}
-.professor_info .evaluation .evalButton{
-	float: left;
-	display: inline-block;
-	color: red;
+
+.evalButton{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	margin: 0px;
+	padding: 15px;
+	font-size: 1.3em;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 20px;
+	border: 1px solid #c3c3c3;
+	color: #fff;
+	background-color: cornflowerblue;
 	cursor: pointer;
-}*/
+}
+
+.comment_p{
+	padding-left: 20px;
+	font-size: 1.3em;
+	line-height: 20px;
+}
 .comments{
 	width: 100%;
 	height: 60%;
@@ -89,6 +90,7 @@ body, html{
 	font-weight: bold;
 }
 .comments .comment_div .comment{
+	padding-left: 10px;
 	word-wrap: break-word;
 	word-break: break-all;
 }
