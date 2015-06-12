@@ -17,12 +17,17 @@
 				<img src='<%= img %>' />
 			</div>
 			<div class="info">
-				<p class='professor'><%= professor %></p>
-				<p class='course'><%= course %></p>
+				<p class='professor'><%= card.professor %></p>
+				<p class='course'><%= card.course %></p>
 			</div>
 			<div class="graph">
 				<canvas id="hexagon"></canvas>
-				<div class="values"><%= values %></div>
+				<input type="hidden" name="fun" value=<%= card.fun %> />
+				<input type="hidden" name="grade" value=<%= card.grade %> />
+				<input type="hidden" name="benefit" value=<%= card.benefit %> />
+				<input type="hidden" name="homework" value=<%= card.homework %> />
+				<input type="hidden" name="difficulty" value=<%= card.difficulty %> />
+				<input type="hidden" name="teamplay" value=<%= card.teamplay %> />
 			</div>
 		</div>
 		<p class="evalButton">평가</p>

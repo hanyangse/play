@@ -46,7 +46,47 @@ app.post('/view', function(req, res){
 	var code = req.body.code;
 	console.log(code+": code !!!!");
 	var query = connection.query("select * from total where code="+ code,function(err,result){
+		if(err){
+			console.log(err);
+			return err;
+		}
+		var card = {
+			courseName : result[0].title,
+			profName : result[0].professor,
+			code : result[0].code,
+			credit : result[0].credits,
+			department : result[0].department,
+			photo: '/images/man.png',
+			fun: result[0].avg(fun),
+			grade: result[0].avg(grade),
+			benefit: result[0].avg(benefit),
+			homework: result[0].avg(homework),
+			difficulty: result[0].avg(difficulty),
+			teamplay: result[0].avg(teamplay)
+		};
+		
+		var query = connection.query("select * from evaluation where code="+ code,function(err,result){
+			if(err){
+				console.log(err);
+				return err;
+			}
+			var comments = [];
+			for (var i = 0; i < result.length ; i++) {
+				comments[i]={
+					userId: result[i].email,
+					comment: result[i].comment,
+					inputdate: result[i].inputdate
+				};
 
+			}
+			res.render('view', 
+			{
+				'title': 'HECE 검색결과',
+				'email': req.session.email,
+				'card': card,
+				'comments': comments
+			});
+		});
 		
 
 		/*res.render('view.ejs',{
