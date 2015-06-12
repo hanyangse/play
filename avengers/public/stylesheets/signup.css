@@ -1,5 +1,5 @@
 body {
-  width : 880px;
+ 
   margin : auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -9,8 +9,8 @@ a {
 }
 
 header {
-	height : 25px;
-	background-color: red;
+	height : 50px;
+	background-color: rgb(134,35,34);
 	padding : 5px;
 	overflow: hidden;
 }
@@ -22,16 +22,20 @@ header > div{
 }
 /*section part*/
 section {
+	background-image: url("images/로그인배경.JPG");
+	background-size: cover;
+	height : 650px;
 	background-color:green;
 	padding: 10px;
 	margin:auto;
 }
-section > article{
+section > #sign_in{
+	display: block;
 	margin:auto;
-	background-color: rgba(0,0,0,0.65);
+	background-color: rgba(0,0,0,0.6);
 	color: white; 
-	width : 450px;
-	height: 260px;
+	width : 500px;
+	height: 300px;
 	padding:10px;
 	position: absolute;
 	top: 200px;
@@ -40,36 +44,53 @@ section > article{
 article h1{
 	font-size: 50px;
 	margin: 0px;
-	margin-top: 10px;
+	margin-top: 25px;
+	margin-left: 10px;
+
 
 }
 article h2{
 	font-size: 35px;
 	margin: 0px;
-	margin-left:75px;
+	margin-left:87px;
+	margin-bottom: 30px;
 
 }
 article p{
 	font-size: 20px;
+	margin-bottom: 30px;
 }
 article p:nth-child(3){
 	width: 380px;
 	text-align: right;
 }
-article p:nth-child(6){
+article p:nth-child(5){
 	font-size: 15px;
 	text-align: right;
+}
+article p:nth-child(5) a{
+	color: white;
 }
 article	form{
 	text-align: center;
 }
 article form input{
 	display: inline;
+	margin-right: 10px;
+	width: 180px;
+	height: 20px;
+	border-radius: 5px;
+	color: rgba(0,0,0,0.3);
 }
+
+
 article form input:nth-child(3){
 	background-color: purple;
+	width: 60px;
+	height: 27px;
 	color: white;
 	border: 0px;
+
 }
 table{
 	background-color: white;
@@ -77,12 +98,40 @@ table{
 	margin:auto;
 }
 footer {
-	height : 25px;
-	background-color: blue;
-	text-align: center;
+	height : 40px;
+	background-color: rgb(50,14,25);
 	clear : both;
 	padding : 10px;
 }
 
+#sign_up {
+	display: none;
+	margin:auto;
+	background-color: rgba(0,0,0,0.6);
+	color: white; 
+	width : 500px;
+	height: 550px;
+	padding:10px;
+	position: absolute;
+	top: 70px;
+	left: 750px;
+}
+footer #div_fb{
+	background-color: rgba(70,70,150,0.6);
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	width: 240px;
+	padding: 4px;
+	padding-bottom: 6px;
+}
+footer #div_fb:hover{
+	background-color: rgba(66,66,160,0.9);
+}
+
+footer #div_fb img {
+	width: 35px;
+}
 
 
