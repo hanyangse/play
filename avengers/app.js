@@ -69,15 +69,15 @@ app.post('/signup_submit',function(req,res){
 });
 
 app.post('/signin_submit',function(req,res){ 
-	var user = {'studentid':req.body.studentid, 'password':req.body.password};
-	var query = connection.query("select password from user where studentid='"+user.studentid+"'",function(err,rows){
+	var user = {'email':req.body.email, 'password':req.body.password};
+	var query = connection.query("select password from user where email='"+user.email+"'",function(err,rows){
 		//console.log(rows);
 		//console.log("user.password"+user.password);
 		//console.log("rows.password"+rows[0].password);
 		if(rows.length != 0){
 			if(user.password==rows[0].password){
-				req.session.studentid = user.studentid;
-				res.render('index.ejs',{studentid:user.studentid});		
+				req.session.email = user.email;
+				res.render('index.ejs',{studentid:user.email});		
 				
 				console.log("routes.index");
 			}else{
