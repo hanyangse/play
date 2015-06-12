@@ -4,6 +4,14 @@ window.onload = function (){
 		
 	var Btn_signup = document.getElementById("to_signin");
 	Btn_signup.onclick = openSignIn; 
+
+	var Div_fb = document.getElementById("div_fb");
+	Div_fb.onclick = authFb;
+
+	var Inp_id = document.getElementById("studentid");
+	Inp_id.onclick = deleteValue;
+	var Inp_passwd = document.getElementById("password");
+	Inp_passwd.onclick = deleteValue;
 }
 
 function openSignUp(){
@@ -20,4 +28,10 @@ function openSignIn(){
 
 	articleSignUp.style.display = "none";
 	articleSignIn.style.display = "block";	
+}
+function deleteValue(){
+	this.value = "";
+}
+function authFb(){
+	alert("이거 할까요?");
 }

@@ -98,9 +98,8 @@ table{
 	margin:auto;
 }
 footer {
-	height : 35px;
+	height : 40px;
 	background-color: rgb(50,14,25);
-	text-align: center;
 	clear : both;
 	padding : 10px;
 }
@@ -115,7 +114,24 @@ footer {
 	padding:10px;
 	position: absolute;
 	top: 70px;
-	left: 700px;
+	left: 750px;
+}
+footer #div_fb{
+	background-color: rgba(70,70,150,0.6);
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	width: 240px;
+	padding: 4px;
+	padding-bottom: 6px;
+}
+footer #div_fb:hover{
+	background-color: rgba(66,66,160,0.9);
+}
+
+footer #div_fb img {
+	width: 35px;
 }
 
 
