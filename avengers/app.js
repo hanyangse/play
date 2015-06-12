@@ -40,13 +40,27 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // view.html 확인용 임시
 app.get('/view', function(req, res){
-	console.log()
-  	res.sendfile('public/view.html');
+	res.render('view.ejs',{
+		img: "/images/man.png",
+		professor: "Scott Uk-jin Lee",
+		course: "Software Engineering",
+		values: [65,59,27,19,96,90],
+		comments: [
+			{userId:"a",comment:"!"},
+			{userId:"b",comment:"@"},
+			{userId:"c",comment:"#"},
+			{userId:"d",comment:"$"},
+			{userId:"e",comment:"%"}
+		]
+	});
 });
-
-
+app.post('/test',function(req,res){
+	console.log("test start");
+	console.log(req.body);
+});
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
