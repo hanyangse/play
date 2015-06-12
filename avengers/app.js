@@ -288,6 +288,7 @@ app.post('/signin_submit',function(req,res){
 				req.session.email = user.email;
 				res.render('main.ejs',{
 					 'email':user.email,
+					 'totCards': totCards,
 					 'funCards': funCards,
 					 'gradeCards': gradeCards,
 					 'benefitCards': benefitCards,
