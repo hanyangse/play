@@ -13,12 +13,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/evaluation.css">
 </head>
 <body>
-	<form action ="/test" method="post">
+	<form action ="http://localhost:3000/test" method="post">
 	<div class="year_sem">
-		<select name="year" class="year"></select>
-		<select name="semester" class="semester"></select>	
+		<select class="year"></select>
+		<select class="semester"></select>	
 	</div>
-
 	<div class="star">
 		<div class="grade">
 			<p>학점</p>
@@ -54,7 +53,7 @@
 	
 	<div class="makeComment">
 		<p>comment</p>
-		<textarea name ="comment" class="comment"></textarea>
+		<textarea class="comment"></textarea>
 	</div>
 	
 	<div class="alert"></div>

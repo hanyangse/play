@@ -5,83 +5,83 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
-
+	<link rel="stylesheet" type="text/css" href="/stylesheets/card.css">
     <script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
     <script type="text/javascript" src="/javascripts/main.js"></script>
   </head>
   <body>
 
-    <% include header.ejs %>
+  	<% include header.ejs %>
 
-    <section class="content">
-      <div id="simpleSearch">
-      <div id="select"><span>다음으로 찾기</span></div>
-      <div class="searchButton">
-        <button class="category" id="prof">교강사</button>
-        <button class="category" id="course">강의명</button>
-      </div>
-      <div class="searchBox" id="profForm">
-        <input class="searchForm" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
-        <button class="searchForm profBtn">찾기</button>
-        <button class="searchCancel">뒤로가기</button>
-      </div>
-      <div class="searchBox" id="courseForm">
-        <input class="searchForm" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
-        <button class="searchForm courseBtn">찾기</button>
-        <button class="searchCancel">뒤로가기</button>
-      </div>
-    </div>
-    <div id="view">
-      <div class="column" id="leftCol">
-        <em>추천랭킹</em>
-        <div class='tabs'>
-            <ul>
-                <li><a href="#tab-1">총점</a></li>
-                <li><a href="#tab-2">재미</a></li>
-                <li><a href="#tab-3">학점</a></li>
-                <li><a href="#tab-4">유익</a></li>
-            </ul>
-            <div class="tab" id='tab-1'><span>안녕1</span></div>
-            <div class="tab" id='tab-2'>
-              <div class="card">
-                <div class="photo"><img src="/images/man.png"></div>
-                <div class="info">
-                  <div class="name">
-                    <p>소프트웨어공학</p>
-                    <p>Scott Uk-Jin Lee</p>
-                  </div>
-                  <div class="graph"></div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="photo"><img src="/images/man.png"></div>
-                <div class="info">
-                  <div class="name">
-                    <p>소프트웨어공학</p>
-                    <p>Scott Uk-Jin Lee</p>
-                  </div>
-                  <div class="graph"></div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="photo"><img src="/images/man.png"></div>
-                <div class="info">
-                  <div class="name">
-                    <p>소프트웨어공학</p>
-                    <p>Scott Uk-Jin Lee</p>
-                  </div>
-                  <div class="graph"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tab" id='tab-3'><span>안녕3</span></div>
-            <div class="tab" id='tab-4'><span>안녕4</span></div>
-        </div>
-      </div>
-      <div class="column" id="wall"></div>
-      <div class="column" id="rightCol"></div>
-    </div>
-    </section>
+  	<section class="content">
+  		<div id="simpleSearch">
+			<div id="select"><span>다음으로 찾기</span></div>
+			<div class="searchButton">
+				<button class="category" id="prof">교강사</button>
+				<button class="category" id="course">강의명</button>
+			</div>
+			<div class="searchBox" id="profForm">
+				<input class="searchForm" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
+				<button class="searchForm profBtn">찾기</button>
+				<button class="searchCancel">뒤로가기</button>
+			</div>
+			<div class="searchBox" id="courseForm">
+				<input class="searchForm" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
+				<button class="searchForm courseBtn">찾기</button>
+				<button class="searchCancel">뒤로가기</button>
+			</div>
+		</div>
+		<div id="view">
+			<div class="column" id="leftCol">
+				<em>추천랭킹</em>
+				<div class='tabs'>
+				    <ul>
+				        <li><a href="#tab-1">총점</a></li>
+				        <li><a href="#tab-2">재미</a></li>
+				        <li><a href="#tab-3">학점</a></li>
+				        <li><a href="#tab-4">유익</a></li>
+				    </ul>
+				    <div class="tab" id='tab-1'><span>안녕1</span></div>
+				    <div class="tab" id='tab-2'>
+				    	<div class="card">
+				    		<div class="photo"><img src="/images/man.png"></div>
+				    		<div class="info">
+				    			<div class="name">
+				    				<p>소프트웨어공학</p>
+				    				<p>Scott Uk-Jin Lee</p>
+				    			</div>
+				    			<div class="graph"></div>
+				    		</div>
+				    	</div>
+				    	<div class="card">
+				    		<div class="photo"><img src="/images/man.png"></div>
+				    		<div class="info">
+				    			<div class="name">
+				    				<p>소프트웨어공학</p>
+				    				<p>Scott Uk-Jin Lee</p>
+				    			</div>
+				    			<div class="graph"></div>
+				    		</div>
+				    	</div>
+				    	<div class="card">
+				    		<div class="photo"><img src="/images/man.png"></div>
+				    		<div class="info">
+				    			<div class="name">
+				    				<p>소프트웨어공학</p>
+				    				<p>Scott Uk-Jin Lee</p>
+				    			</div>
+				    			<div class="graph"></div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="tab" id='tab-3'><span>안녕3</span></div>
+				    <div class="tab" id='tab-4'><span>안녕4</span></div>
+				</div>
+			</div>
+			<div class="column" id="wall"></div>
+			<div class="column" id="rightCol"></div>
+		</div>
+  	</section>
   </body>
 </html>

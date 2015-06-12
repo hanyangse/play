@@ -40,13 +40,27 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // view.html 확인용 임시
 app.get('/view', function(req, res){
-	console.log()
-  	res.sendfile('public/view.html');
+	res.render('view.ejs',{
+		img: "/images/man.png",
+		professor: "Scott Uk-jin Lee",
+		course: "Software Engineering",
+		values: [65,59,27,19,96,90],
+		comments: [
+			{userId:"a",comment:"!"},
+			{userId:"b",comment:"@"},
+			{userId:"c",comment:"#"},
+			{userId:"d",comment:"$"},
+			{userId:"e",comment:"%"}
+		]
+	});
 });
-
-
+app.post('/test',function(req,res){
+	console.log("test start");
+	console.log(req.body);
+});
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -56,10 +70,45 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 //app.get('/users', user.list);
 
+app.post('/search',function(req, res, next) {
+
+	//var user = {'email': req.session.email};
+	var keyword = "'%"+ req.body.keyword+"%'";
+	var queryString = 'select * from course where title like ' + keyword +' or professor like '+keyword ;
+	console.log(queryString);
+	var query = connection.query(queryString,function(err,result){
+		if(err){
+			console.error(err);
+			throw err;
+		}
+		console.log(query);
+
+		var cards = [];
+		for(var i = 0; i< result.length; i++){
+			cards[i] = {courseName : result[i].title,
+						profName : result[i].professor,
+						code : result[i].code,
+						credit : result[i].grade,
+						department : result[i].department,
+						photo: '/images/man.png'};
+		}
+	//console.log(keyword+": keyword");
+		res.render('search', 
+		{
+			'title': 'HECE 검색결과',
+			'email': req.session.email,
+			'cards': cards
+		});
+	});
+
+	
+	//res.render('index', { title: 'Express' });
+	
+});
 app.post('/signup', user.signup);
 
 app.post('/signup_submit',function(req,res){
-	var user = {'studentid':req.body.studentid,'password':req.body.password};
+	var user = {'email':req.body.email, 'studentid':req.body.studentid,'password':req.body.password};
 	var query = connection.query('insert into user set ?', user,function(err,result){
 		if(err){
 			console.error(err);
