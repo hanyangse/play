@@ -7,11 +7,18 @@ body {
 a {
   color: #00B7FF;
 }
-
+#logo{
+	float: left;
+	display: inline-block;
+	width: 150px;
+	height : 72px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
 header {
 
-	height : 50px;
-	background-color: rgb(134,35,34);
+	height : 72px;
+	background-color: rgba(5,130,255,0.71);
 
 	padding : 5px;
 	overflow: hidden;
@@ -116,7 +123,7 @@ table{
 footer {
 
 	height : 40px;
-	background-color: rgb(50,14,25);
+	background-color: rgba(5,130,255,0.71);
 
 	clear : both;
 	padding : 10px;

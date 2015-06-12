@@ -46,4 +46,11 @@ $(function(){
 		$("#sign_in").show();
 		$("#sign_up").hide();
 	});
+	/*$("#logo").click(function(){
+		var temp_form = $("form");
+		temp_form.attr("action","/");
+		temp_form.attr("method","post");
+		temp_form.submit();
+		
+	});*/
 })
