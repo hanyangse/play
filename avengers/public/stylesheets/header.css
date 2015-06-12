@@ -18,17 +18,19 @@
 }
 #search {
 	display: inline-block;
-	position: absolute;
-	width: 60%;
-	right: 0px;
+	width: 45%;
 	margin-top: 18px;
-	margin-right: 20%;
+	
 }
 #search input:focus{
 	outline: none;
+	background-color: white;
+}
+#search input:hover{
+	background-color: white;
 }
 #search input{
-	background: white;
+	background: rgba(255,255,255,0.6);
 	font-family: "Source Sans Pro Light";
 	font-size: 22px;
 	border: none;
@@ -38,4 +40,30 @@
 	color: black;
 	width: 90%;
 	border-radius: 100px;
+}
+#login_info{
+	float: right;
+	min-width: 300px;
+	width: 30%;
+}
+#login_info input{
+	background: none;
+	border: none;
+	color: white;
+	font-size: 17pt;
+	display: inline-block;
+	height: auto;
+	padding: 20px;
+	float: right;
+}
+
+#login_info input:hover{
+	color: #ddd;
+}
+
+#login_info span{
+	float: right;
+	color: #FFF;
+	padding-top: 25px;
+	font-size: 13pt;
 }

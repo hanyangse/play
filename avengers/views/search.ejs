@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/search.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/card.css">
+
+		<script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
+		<script type="text/javascript" src="/javascripts/main.js"></script>
+	</head>
+<body>
+
+  	<% include header.ejs %>
+
+  	<section class="content">
+  		<div class="searchView">
+		<%
+		for (var i = 0; i < cards.length; i++) { %>
+			<div class="card">
+	    		<div class="photo"><img src='<%- cards[i].photo %>'></div>
+	    		<div class="info">
+	    			<div class="name">
+	    				<p><%= cards[i].courseName %></p>
+	    				<p><%= cards[i].profName %></p>
+	    			</div>
+	    			<div class="graph"></div>
+	    		</div>
+	    	</div>
+	<%	}	%>
+  		</div>
+  	</section>
+  </body>
+</html>
