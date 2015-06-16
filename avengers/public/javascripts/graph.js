@@ -5,8 +5,8 @@ $(function(){
 		console.log(el);
 		console.log(index);
 		console.log($(this));
-		var positive = [el.children('input[name="fun"]').val()*1,el.children('input[name="benefit"]').val()*1,0,0,0,el.children('input[name="grade"]').val()*1];
-		var negative = [0,0,el.children('input[name="homework"]').val()*1,el.children('input[name="teamplay"]').val()*1,el.children('input[name="difficulty"]').val()*1,0];
+		var positive = [$(this).children('input[name="fun"]').val()*1,$(this).children('input[name="benefit"]').val()*1,0,0,0,$(this).children('input[name="grade"]').val()*1];
+		var negative = [0,0,$(this).children('input[name="homework"]').val()*1,$(this).children('input[name="teamplay"]').val()*1,$(this).children('input[name="difficulty"]').val()*1,0];
 		console.log("merong");
 		var radarChartData = {
 			labels: ["Interesting", "Benefit", "Assignment", "Team project", "Difficulty", "Grade"],
