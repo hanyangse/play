@@ -111,6 +111,26 @@ app.post('/view', function(req, res){
 app.post('/test',function(req,res){
 	console.log("test start");
 	console.log(req.body);
+	var eval = {
+		'email':req.session.email, 
+		'code':req.body.code,
+		'year':req.body.year,
+		'semester':req.body.semester,
+		'fun':req.body.interesting,
+		'grade':req.body,grade,
+		'homework':req.body.assignment,
+		'difficulty':req.body.difficulty,
+		'benefit':req.body.benefit,
+		'teamplay':req.body.teamproject,
+		'comment':req.body.comment,
+	};
+	var query = connection.query('insert into evaluation set ?', eval,function(err,result){
+		if(err){
+			console.error(err);
+			throw err;
+		}
+		console.log(query);
+	})	
 });
 // development only
 if ('development' == app.get('env')) {
