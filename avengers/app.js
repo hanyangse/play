@@ -186,12 +186,110 @@ app.post('/signin_submit',function(req,res){
 		//console.log("rows.password"+rows[0].password);
 		if(rows.length != 0){
 			if(user.password==rows[0].password){
-				//req.session.studentid = rows[0].studentid;
-				req.session.email = user.email;
-				res.render('main.ejs',{
-					//'studentid':rows[0].studentid,
-					 'email':user.email});		
+				var totCards = [];
+				var funCards = [];
+				var gradeCards = [];
+				var benefitCards = [];
+				var query = connection.query("select * , concat(fun+benefit+grade-homework-difficulty-teamplay) sum from totalv order by sum limit 10", function(err,result){
+					if(err){
+						console.log(err);
+						return err;
+					}
 
+					for (var i = 0; i < result.length; i++) {
+						totCards[i]= {
+							courseName : result[i]['title'],
+							profName : result[i]['professor'],
+							code : result[i]['code'],
+							credit : result[i]['credits'],
+							department : result[i]['department'],
+							photo: '/images/man.png',
+							fun: result[i]['fun'],
+							grade: result[i]['grade'],
+							benefit: result[i]['benefit'],
+							homework: result[i]['homework'],
+							difficulty: result[i]['difficulty'],
+							teamplay: result[i]['teamplay']
+						};
+					}
+					var query = connection.query("select * from totalv order by fun desc limit 10 ",function(err,result){
+					if(err){
+						console.log(err);
+						return err;
+					}
+
+					for (var i = 0; i < result.length; i++) {
+						funCards[i]= {
+							courseName : result[i]['title'],
+							profName : result[i]['professor'],
+							code : result[i]['code'],
+							credit : result[i]['credits'],
+							department : result[i]['department'],
+							photo: '/images/man.png',
+							fun: result[i]['fun'],
+							grade: result[i]['grade'],
+							benefit: result[i]['benefit'],
+							homework: result[i]['homework'],
+							difficulty: result[i]['difficulty'],
+							teamplay: result[i]['teamplay']
+						};
+					}
+					var query = connection.query("select * from totalv order by grade desc limit 10 ",function(err,result){
+					if(err){
+						console.log(err);
+						return err;
+					}
+
+					for (var i = 0; i < result.length; i++) {
+						gradeCards[i]= {
+							courseName : result[i]['title'],
+							profName : result[i]['professor'],
+							code : result[i]['code'],
+							credit : result[i]['credits'],
+							department : result[i]['department'],
+							photo: '/images/man.png',
+							fun: result[i]['fun'],
+							grade: result[i]['grade'],
+							benefit: result[i]['benefit'],
+							homework: result[i]['homework'],
+							difficulty: result[i]['difficulty'],
+							teamplay: result[i]['teamplay']
+						};
+					}
+					var query = connection.query("select * from totalv order by benefit desc limit 10 ",function(err,result){
+					if(err){
+						console.log(err);
+						return err;
+					}
+
+					for (var i = 0; i < result.length; i++) {
+						benefitCards[i]= {
+							courseName : result[i]['title'],
+							profName : result[i]['professor'],
+							code : result[i]['code'],
+							credit : result[i]['credits'],
+							department : result[i]['department'],
+							photo: '/images/man.png',
+							fun: result[i]['fun'],
+							grade: result[i]['grade'],
+							benefit: result[i]['benefit'],
+							homework: result[i]['homework'],
+							difficulty: result[i]['difficulty'],
+							teamplay: result[i]['teamplay']
+						};
+					}
+					req.session.email = user.email;
+					res.render('main.ejs',{
+						 'email':user.email,
+						 'totCards': totCards,
+						 'funCards': funCards,
+						 'gradeCards': gradeCards,
+						 'benefitCards': benefitCards,
+						});	
+				});
+				});
+				});
+				});
 				
 				console.log("routes.index");
 			}else{

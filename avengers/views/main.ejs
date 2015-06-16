@@ -9,6 +9,7 @@
 
     <script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
+    <script type="text/javascript" src="/javascript/Chart.js"></script>
     <script type="text/javascript" src="/javascripts/main.js"></script>
   </head>
   <body>
@@ -43,41 +44,98 @@
                 <li><a href="#tab-3">학점</a></li>
                 <li><a href="#tab-4">유익</a></li>
             </ul>
-            <div class="tab" id='tab-1'><span>안녕1</span></div>
-            <div class="tab" id='tab-2'>
-              <div class="card">
-                <div class="photo"><img src="/images/man.png"></div>
-                <div class="info">
-                  <div class="name">
-                    <p>소프트웨어공학</p>
-                    <p>Scott Uk-Jin Lee</p>
+            <div class="tab" id='tab-1'>
+              <% for (var i = 0; i < totCards.length; i++) { %>
+                <div class="card">
+                  <input type="hidden" name="code" value=<%= totCards[i].code %> />
+                    <div class="photo"><img src='<%- totCards[i].photo %>'></div>
+                    <div class="info">
+                      <div class="name">
+                        <p><%= 'Title : '+totCards[i].courseName %></p>
+                        <p><%= 'Professor : '+totCards[i].profName %></p>
+                      </div>
+                      <div class="graph">
+                        <canvas id="hexagon"></canvas>
+                        <input type="hidden" name="fun" value=<%= totCards[i].fun %> />
+                        <input type="hidden" name="grade" value=<%= totCards[i].grade %> />
+                        <input type="hidden" name="benefit" value=<%= totCards[i].benefit %> />
+                        <input type="hidden" name="homework" value=<%= totCards[i].homework %> />
+                        <input type="hidden" name="difficulty" value=<%= totCards[i].difficulty %> />
+                        <input type="hidden" name="teamplay" value=<%= totCards[i].teamplay %> />
+                      </div>
+                    </div>
                   </div>
-                  <div class="graph"></div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="photo"><img src="/images/man.png"></div>
-                <div class="info">
-                  <div class="name">
-                    <p>소프트웨어공학</p>
-                    <p>Scott Uk-Jin Lee</p>
-                  </div>
-                  <div class="graph"></div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="photo"><img src="/images/man.png"></div>
-                <div class="info">
-                  <div class="name">
-                    <p>소프트웨어공학</p>
-                    <p>Scott Uk-Jin Lee</p>
-                  </div>
-                  <div class="graph"></div>
-                </div>
-              </div>
+            <%  } %>
             </div>
-            <div class="tab" id='tab-3'><span>안녕3</span></div>
-            <div class="tab" id='tab-4'><span>안녕4</span></div>
+            <div class="tab" id='tab-2'>
+            <% for (var i = 0; i < funCards.length; i++) { %>
+                <div class="card">
+                  <input type="hidden" name="code" value=<%= funCards[i].code %> />
+                    <div class="photo"><img src='<%- funCards[i].photo %>'></div>
+                    <div class="info">
+                      <div class="name">
+                        <p><%= 'Title : '+funCards[i].courseName %></p>
+                        <p><%= 'Professor : '+funCards[i].profName %></p>
+                      </div>
+                      <div class="graph">
+                        <canvas id="hexagon"></canvas>
+                        <input type="hidden" name="fun" value=<%= funCards[i].fun %> />
+                        <input type="hidden" name="grade" value=<%= funCards[i].grade %> />
+                        <input type="hidden" name="benefit" value=<%= funCards[i].benefit %> />
+                        <input type="hidden" name="homework" value=<%= funCards[i].homework %> />
+                        <input type="hidden" name="difficulty" value=<%= funCards[i].difficulty %> />
+                        <input type="hidden" name="teamplay" value=<%= funCards[i].teamplay %> />
+                      </div>
+                    </div>
+                  </div>
+            <%  } %>
+            </div>
+            <div class="tab" id='tab-3'>
+            <% for (var i = 0; i < gradeCards.length; i++) { %>
+                <div class="card">
+                  <input type="hidden" name="code" value=<%= gradeCards[i].code %> />
+                    <div class="photo"><img src='<%- gradeCards[i].photo %>'></div>
+                    <div class="info">
+                      <div class="name">
+                        <p><%= 'Title : '+gradeCards[i].courseName %></p>
+                        <p><%= 'Professor : '+gradeCards[i].profName %></p>
+                      </div>
+                      <div class="graph">
+                        <canvas id="hexagon"></canvas>
+                        <input type="hidden" name="fun" value=<%= gradeCards[i].fun %> />
+                        <input type="hidden" name="grade" value=<%= gradeCards[i].grade %> />
+                        <input type="hidden" name="benefit" value=<%= gradeCards[i].benefit %> />
+                        <input type="hidden" name="homework" value=<%= gradeCards[i].homework %> />
+                        <input type="hidden" name="difficulty" value=<%= gradeCards[i].difficulty %> />
+                        <input type="hidden" name="teamplay" value=<%= gradeCards[i].teamplay %> />
+                      </div>
+                    </div>
+                  </div>
+            <%  } %>
+            </div>
+            <div class="tab" id='tab-4'>
+            <% for (var i = 0; i < benefitCards.length; i++) { %>
+                <div class="card">
+                  <input type="hidden" name="code" value=<%= benefitCards[i].code %> />
+                    <div class="photo"><img src='<%- benefitCards[i].photo %>'></div>
+                    <div class="info">
+                      <div class="name">
+                        <p><%= 'Title : '+benefitCards[i].courseName %></p>
+                        <p><%= 'Professor : '+benefitCards[i].profName %></p>
+                      </div>
+                      <div class="graph">
+                        <canvas id="hexagon"></canvas>
+                        <input type="hidden" name="fun" value=<%= benefitCards[i].fun %> />
+                        <input type="hidden" name="grade" value=<%= benefitCards[i].grade %> />
+                        <input type="hidden" name="benefit" value=<%= benefitCards[i].benefit %> />
+                        <input type="hidden" name="homework" value=<%= benefitCards[i].homework %> />
+                        <input type="hidden" name="difficulty" value=<%= benefitCards[i].difficulty %> />
+                        <input type="hidden" name="teamplay" value=<%= benefitCards[i].teamplay %> />
+                      </div>
+                    </div>
+                  </div>
+            <%  } %>
+            </div>
         </div>
       </div>
       <div class="column" id="wall"></div>
