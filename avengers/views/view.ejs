@@ -30,7 +30,7 @@
 				<div class="interesting">
 					<p>재미</p>
 					<div class="interest_star"></div>
-					<input type="hidden" name="interesting">
+					<input type="hidden" name="fun">
 				</div>
 				<div class="benefit">
 					<p>학습</p>
@@ -40,12 +40,12 @@
 				<div class="assignment">
 					<p>과제</p>
 					<div class="assign_star"></div>
-					<input type="hidden" name="assignment">
+					<input type="hidden" name="homework">
 				</div>
 				<div class="teamproject">
 					<p>팀플</p>
 					<div class="teamprj_star"></div>	
-					<input type="hidden" name="teamproject">
+					<input type="hidden" name="teamplay">
 				</div>
 				<div class="difficulty">
 					<p>난이도</p>
@@ -81,12 +81,12 @@
 			</div>
 			<div class="graph">
 				<canvas id="hexagon"></canvas>
-				<input type="hidden" name="fun" value=<%= card.fun %> />
-				<input type="hidden" name="grade" value=<%= card.grade %> />
-				<input type="hidden" name="benefit" value=<%= card.benefit %> />
-				<input type="hidden" name="homework" value=<%= card.homework %> />
-				<input type="hidden" name="difficulty" value=<%= card.difficulty %> />
-				<input type="hidden" name="teamplay" value=<%= card.teamplay %> />
+				<input type="hidden" class="graph" name="fun" value=<%= card.fun %> />
+				<input type="hidden" class="graph" name="grade" value=<%= card.grade %> />
+				<input type="hidden" class="graph" name="benefit" value=<%= card.benefit %> />
+				<input type="hidden" class="graph" name="homework" value=<%= card.homework %> />
+				<input type="hidden" class="graph" name="difficulty" value=<%= card.difficulty %> />
+				<input type="hidden" class="graph" name="teamplay" value=<%= card.teamplay %> />
 			</div>
 		</div>
 		<p class="evalButton">평가</p>
