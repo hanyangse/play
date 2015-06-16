@@ -5,6 +5,14 @@
 	margin-bottom: 5px;
 	border: solid 1px #ccc;
 }
+.card:hover{
+	background-color: rgba(1,1,1,0.5);
+	-webkit-transition: all .25s ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(<number>,<number>,<number>,<number>);
+	   -moz-transition: all .25s ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(<number>,<number>,<number>,<number>);
+	    -ms-transition: all .25s ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(<number>,<number>,<number>,<number>);
+	     -o-transition: all .25s ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(<number>,<number>,<number>,<number>);
+	        transition: all .25s ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(<number>,<number>,<number>,<number>);
+}
 .card > div{
 	float: left;
 
