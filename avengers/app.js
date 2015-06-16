@@ -130,7 +130,7 @@ app.post('/search',function(req, res, next) {
 
 	//var user = {'email': req.session.email};
 	var keyword = "'%"+ req.body.keyword+"%'";
-	var queryString = 'select * from totalv where title like ' + keyword +' or professor like '+keyword ;
+	var queryString = 'select * from course where title like ' + keyword +' or professor like '+keyword ;
 	console.log(queryString);
 	var query = connection.query(queryString,function(err,result){
 		if(err){
@@ -146,13 +146,7 @@ app.post('/search',function(req, res, next) {
 							profName : result[i]['professor'],
 							code : result[i]['code'],
 							credit : result[i]['credits'],
-							photo: '/images/man.png',
-							fun: result[i]['fun'],
-							grade: result[i]['grade'],
-							benefit: result[i]['benefit'],
-							homework: result[i]['homework'],
-							difficulty: result[i]['difficulty'],
-							teamplay: result[i]['teamplay']
+							photo: '/images/man.png'
 						};
 		}
 	//console.log(keyword+": keyword");
