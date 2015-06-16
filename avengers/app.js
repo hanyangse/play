@@ -117,7 +117,7 @@ app.post('/test',function(req,res){
 		'year':req.body.year,
 		'semester':req.body.semester,
 		'fun':req.body.interesting,
-		'grade':req.body,grade,
+		'grade':req.body.grade,
 		'homework':req.body.assignment,
 		'difficulty':req.body.difficulty,
 		'benefit':req.body.benefit,
