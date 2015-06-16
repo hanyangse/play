@@ -8,18 +8,14 @@ function init(){
 	getGragh();
 
 	$(".evalButton").click(function(){
-		var popupOptions = "width=650px,height=570px,location=no,resizable=yes,scrollbars=yes,menubar=no,toolbar=no;";
-		window.open("evaluation.html", 'evaluation', popupOptions);
+		$("#eval").css({
+			display: 'block'
+		});
 	});
 }
 
 // 그래프 값 가져오기
 function getGragh(){
-//	var values = $(".values").text();
-//	var valueArray = values.split(',');
-
-	//var positive = [valueArray[0]*1,valueArray[1]*1,0,0,0,valueArray[5]*1];
-	//var negative = [0,0,valueArray[2]*1,valueArray[3]*1,valueArray[4]*1,0];
 	var positive = [$('input[name="fun"]').val()*1,$('input[name="benefit"]').val()*1,0,0,0,$('input[name="grade"]').val()*1];
 	var negative = [0,0,$('input[name="homework"]').val()*1,$('input[name="teamplay"]').val()*1,$('input[name="difficulty"]').val()*1,0];
 

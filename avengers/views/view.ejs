@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/header.css">
 	<script type="text/javascript" src="javascript/Chart.js"></script>
 	<script type="text/javascript" src="javascript/view.js"></script>
+	<script type="text/javascript" src="javascript/evaluation.js"></script>
 </head>
 <body>
 	<% include header.ejs %>
@@ -48,6 +49,55 @@
 			<%}%>
 		</div>
 	</div>
+	<div id="eval">
+		<form action ="/test" method="post">
+			<div class="year_sem">
+				<select name="year" class="year"></select>
+				<select name="semester" class="semester"></select>	
+			</div>
 
+			<div class="star">
+				<div class="grade">
+					<p>학점</p>
+					<div class="grade_star"></div>
+					<input type="hidden" name="grade">
+				</div>
+				<div class="interesting">
+					<p>재미</p>
+					<div class="interest_star"></div>
+					<input type="hidden" name="interesting">
+				</div>
+				<div class="benefit">
+					<p>학습</p>
+					<div class="benefit_star"></div>
+					<input type="hidden" name="benefit">
+				</div>
+				<div class="assignment">
+					<p>과제</p>
+					<div class="assign_star"></div>
+					<input type="hidden" name="assignment">
+				</div>
+				<div class="teamproject">
+					<p>팀플</p>
+					<div class="teamprj_star"></div>	
+					<input type="hidden" name="teamproject">
+				</div>
+				<div class="difficulty">
+					<p>난이도</p>
+					<div class="difficult_star"></div>
+					<input type="hidden" name="difficulty">
+				</div>	
+			</div>
+			
+			<div class="makeComment">
+				<p>comment</p>
+				<textarea name ="comment" class="comment"></textarea>
+			</div>
+			
+			<div class="alert"></div>
+
+			<div class="checkButton"><input type="submit"></div>
+		</form>
+	</div>
 </body>
 </html>

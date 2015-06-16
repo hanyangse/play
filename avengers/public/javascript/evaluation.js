@@ -4,28 +4,12 @@ $(function() {
     setSemester();
      
     $("form").submit(function(){
-        /*
-        if($("input[name='grade']").val()==""||$("input[name='interesting']").val()==""||$("input[name='benefit']").val()==""
-          ||$("input[name='assignment']").val()==""||$("input[name='teamproject']").val()==""||$("input[name='difficulty']").val()==""){
-            $(".alert").empty();
-            $(".alert").append("<p>모든 항목을 평가해주세요.</p>")
-            return false;
-        }
-        else if(getYear()==""||getSemester()==""){
-            $(".alert").empty();
-            $(".alert").append("<p>연도와 학기를 선택해주세요.</p>")
-            return false;
-        }
-        else if(getComment()==""){
-            var retVal = confirm("코멘트 없이 평가하시겠습니까?");
-            if(retVal == true)  return true;
-            else  return false;
-        }
-        else{*/
-            var retVal = confirm("이대로 평가하시겠습니까?");
-            if(retVal == true)  return true;
-            else  return false;
-        //}
+        var retVal = confirm("이대로 평가하시겠습니까?");
+        $("#eval").css({
+            display: 'none'
+        });
+        if(retVal == true)  return true;
+        else  return false;
     });
 });
 
