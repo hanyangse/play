@@ -145,7 +145,7 @@ app.post('/search',function(req, res, next) {
 
 	//var user = {'email': req.session.email};
 	var keyword = "'%"+ req.body.keyword+"%'";
-	var queryString = 'select * from course where title like ' + keyword +' or professor like '+keyword ;
+	var queryString = 'select * from totalv where title like ' + keyword +' or professor like '+keyword ;
 	console.log(queryString);
 	var query = connection.query(queryString,function(err,result){
 		if(err){
@@ -156,12 +156,19 @@ app.post('/search',function(req, res, next) {
 
 		var cards = [];
 		for(var i = 0; i< result.length; i++){
-			cards[i] = {courseName : result[i].title,
-						profName : result[i].professor,
-						code : result[i].code,
-						credit : result[i].credits,
-						department : result[i].department,
-						photo: '/images/man.png'};
+			cards[i] = {
+							courseName : result[i]['title'],
+							profName : result[i]['professor'],
+							code : result[i]['code'],
+							credit : result[i]['credits'],
+							photo: '/images/man.png',
+							fun: result[i]['fun'],
+							grade: result[i]['grade'],
+							benefit: result[i]['benefit'],
+							homework: result[i]['homework'],
+							difficulty: result[i]['difficulty'],
+							teamplay: result[i]['teamplay']
+						};
 		}
 	//console.log(keyword+": keyword");
 		res.render('search', 
@@ -222,7 +229,6 @@ app.post('/signin_submit',function(req,res){
 							profName : result[i]['professor'],
 							code : result[i]['code'],
 							credit : result[i]['credits'],
-							department : result[i]['department'],
 							photo: '/images/man.png',
 							fun: result[i]['fun'],
 							grade: result[i]['grade'],

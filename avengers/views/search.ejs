@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
 		<script type="text/javascript" src="/javascripts/search.js"></script>
+		<script type="text/javascript" src="/javascripts/graph.js"></script>
 	</head>
 <body>
 
@@ -31,7 +32,17 @@
 	    				<p><%= 'Code : '+cards[i].code %></p>
 	    				<p><%= 'Department : '+cards[i].department %></p>
 	    			</div>
-	    			<div class="graph"></div>
+	    			<div class="graph">
+                        <canvas class="hexagon">
+                          <input type="hidden" name="fun" value=<%= Cards[i].fun %> />
+                          <input type="hidden" name="grade" value=<%= Cards[i].grade %> />
+                          <input type="hidden" name="benefit" value=<%= Cards[i].benefit %> />
+                          <input type="hidden" name="homework" value=<%= Cards[i].homework %> />
+                          <input type="hidden" name="difficulty" value=<%= Cards[i].difficulty %> />
+                          <input type="hidden" name="teamplay" value=<%= Cards[i].teamplay %> />
+                        </canvas>
+                        
+                      </div>
 	    		</div>
 	    	</div>
 	<%	}	%>
