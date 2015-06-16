@@ -30,4 +30,8 @@
 }
 .graph{
 	float: right;
+	width: 40%;
+}
+.name{
+	width: 60%;
 }
