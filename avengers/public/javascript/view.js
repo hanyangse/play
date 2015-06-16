@@ -53,8 +53,6 @@ function getGragh(){
 			//** Required if scaleOverride is true **
 			//Number - The number of steps in a hard coded scale
 			scaleSteps : 5,
-			//Number - The value jump in the hard coded scale
-			scaleStepWidth : 1,
 			//Number - The centre starting value
 			scaleStartValue : 0
 		});
