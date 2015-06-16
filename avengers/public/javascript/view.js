@@ -48,6 +48,6 @@ function getGragh(){
 	//var ctx = $("#hexagon").getContext("2d");	/* 안됨 */
 	var ctx = document.getElementById("hexagon").getContext("2d");
 	var newChart = new Chart(ctx).Radar(radarChartData, {
-			responsive: true,
+			responsive: true
 		});
 }
