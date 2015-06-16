@@ -3,7 +3,7 @@ $(function() {
     setYear();
     setSemester();
      
-    $("form").submit(function(){
+    $("#eval form").submit(function(){
         var retVal = confirm("이대로 평가하시겠습니까?");
         $("#eval").css({
             display: 'none'
