@@ -1,7 +1,8 @@
 $(function(){
 	$('.hexagon').each(function(index, el) {
-		var positive = [el.children('.graph input[name="fun"]').val()*1,el.children('.graph input[name="benefit"]').val()*1,0,0,0,el.children('.graph input[name="grade"]').val()*1];
-		var negative = [0,0,el.children('.graph input[name="homework"]').val()*1,el.children('.graph input[name="teamplay"]').val()*1,el.children('.graph input[name="difficulty"]').val()*1,0];
+		console.log("meme");
+		var positive = [el.children('input[name="fun"]').val()*1,el.children('input[name="benefit"]').val()*1,0,0,0,el.children('input[name="grade"]').val()*1];
+		var negative = [0,0,el.children('input[name="homework"]').val()*1,el.children('input[name="teamplay"]').val()*1,el.children('input[name="difficulty"]').val()*1,0];
 		console.log("merong");
 		var radarChartData = {
 			labels: ["Interesting", "Benefit", "Assignment", "Team project", "Difficulty", "Grade"],
