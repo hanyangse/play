@@ -49,13 +49,5 @@ function getGragh(){
 	var ctx = document.getElementById("hexagon").getContext("2d");
 	var newChart = new Chart(ctx).Radar(radarChartData, {
 			responsive: true,
-			scaleOverride : true,
-			//** Required if scaleOverride is true **
-			//Number - The number of steps in a hard coded scale
-			scaleSteps : 5,
-			//Number - The value jump in the hard coded scale
-			scaleStepWidth : 0.1,
-			//Number - The centre starting value
-			scaleStartValue : 0
 		});
 }
