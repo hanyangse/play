@@ -56,13 +56,15 @@
                         <p><%= 'Professor : '+totCards[i].profName %></p>
                       </div>
                       <div class="graph">
-                        <canvas id="hexagon"></canvas>
-                        <input type="hidden" name="fun" value=<%= totCards[i].fun %> />
-                        <input type="hidden" name="grade" value=<%= totCards[i].grade %> />
-                        <input type="hidden" name="benefit" value=<%= totCards[i].benefit %> />
-                        <input type="hidden" name="homework" value=<%= totCards[i].homework %> />
-                        <input type="hidden" name="difficulty" value=<%= totCards[i].difficulty %> />
-                        <input type="hidden" name="teamplay" value=<%= totCards[i].teamplay %> />
+                        <canvas id="hexagon">
+                          <input type="hidden" name="fun" value=<%= totCards[i].fun %> />
+                          <input type="hidden" name="grade" value=<%= totCards[i].grade %> />
+                          <input type="hidden" name="benefit" value=<%= totCards[i].benefit %> />
+                          <input type="hidden" name="homework" value=<%= totCards[i].homework %> />
+                          <input type="hidden" name="difficulty" value=<%= totCards[i].difficulty %> />
+                          <input type="hidden" name="teamplay" value=<%= totCards[i].teamplay %> />
+                        </canvas>
+                        
                       </div>
                     </div>
                   </div>
