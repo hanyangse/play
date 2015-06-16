@@ -89,21 +89,6 @@ app.post('/view', function(req, res){
 			});
 		});
 		
-
-		/*res.render('view.ejs',{
-			
-			img: "/images/man.png",
-			professor: "Scott Uk-jin Lee",
-			course: "Software Engineering",
-			values: [65,59,27,19,96,90],
-			comments: [
-				{userId:"a",comment:"!"},
-				{userId:"b",comment:"@"},
-				{userId:"c",comment:"#"},
-				{userId:"d",comment:"$"},
-				{userId:"e",comment:"%"}
-			]
-		});	*/
 	});
 	console.log(query);
 	
