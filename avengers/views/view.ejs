@@ -17,8 +17,13 @@
 				<img src=<%= card.photo %> />
 			</div>
 			<div class="info">
-				<p class='professor'><%= card.profName %></p>
-				<p class='course'><%= card.courseName %></p>
+				<div class="name">
+    				<p><%= 'Title : '+cards.courseName %></p>
+    				<p><%= 'Professor : '+cards.profName %></p>
+    				<p><%= 'Credit : '+cards.credit %></p>
+    				<p><%= 'Code : '+cards.code %></p>
+    				<p><%= 'Department : '+cards.department %></p>
+    			</div>
 			</div>
 			<div class="graph">
 				<canvas id="hexagon"></canvas>
