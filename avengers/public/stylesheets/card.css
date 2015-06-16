@@ -28,6 +28,7 @@
 .info {
 	width: 70%;
 	display: inline-block;
+	height: 153px;
 }
 .info div{
 	display: inline-block;
