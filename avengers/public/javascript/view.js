@@ -16,9 +16,11 @@ function init(){
 
 // 그래프 값 가져오기
 function getGragh(){
+
 	var positive = [$('input[name="fun"]').val()*1,$('input[name="benefit"]').val()*1,0,0,0,$('input[name="grade"]').val()*1];
 	var negative = [0,0,$('input[name="homework"]').val()*1,$('input[name="teamplay"]').val()*1,$('input[name="difficulty"]').val()*1,0];
-
+	console.log("po"+positive);
+	console.log("ne"+negative);
 	var radarChartData = {
 		labels: ["Interesting", "Benefit", "Assignment", "Team project", "Difficulty", "Grade"],
 		datasets: [
