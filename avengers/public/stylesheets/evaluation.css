@@ -4,13 +4,20 @@
 	display: none;
 	z-index: 10;
 	background-color: rgba(1,1,1,0.5);
+	position: absolute;
+	top: 72px;
+	left: 0px;
+	text-align: center;
 }
 #eval form{
 	background-color: #fff;
 	width: 650px;
 	height: 570px;
 	overflow: scroll;
+	display: inline-block;
 	z-index: 11;
+	position: relative;
+	top: 30px;
 }
 
 .year_sem{
