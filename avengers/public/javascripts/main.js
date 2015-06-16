@@ -28,7 +28,7 @@ $(function(){
 		temp_form.attr("method","post");
 		temp_form.submit();		
 	});
-
+/*
 	$('.hexagon').each(function(index, el) {
 		var positive = [el.children('input[name="fun"]').val()*1,el.children('el input[name="benefit"]').val()*1,0,0,0,el.children('input[name="grade"]').val()*1];
 		var negative = [0,0,el.children('el input[name="homework"]').val()*1,el.children('el input[name="teamplay"]').val()*1,el.children('input[name="difficulty"]').val()*1,0];
@@ -59,10 +59,10 @@ $(function(){
 			]
 		};
 
-		var ctx = el.getContext("2d");	/* 안됨 */
+		var ctx = el.getContext("2d");
 		var newChart = new Chart(ctx).Radar(radarChartData, {
 				responsive: true
 			});
 	});
-	
+	*/
 });
