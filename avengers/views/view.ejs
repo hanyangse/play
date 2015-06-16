@@ -14,44 +14,6 @@
 	<script type="text/javascript" src="javascript/evaluation.js"></script>
 </head>
 <body>
-	<% include header.ejs %>
-	<div class="content">
-		<div class="professor_info">
-			<div class="picture">
-				<img src=<%= card.photo %> />
-			</div>
-			<div class="info">
-				<div class="name">
-    				<p><%= 'Title : '+card.courseName %></p>
-    				<p><%= 'Professor : '+card.profName %></p>
-    				<p><%= 'Credit : '+card.credit %></p>
-    				<p><%= 'Code : '+card.code %></p>
-    				<p><%= 'Department : '+card.department %></p>
-    			</div>
-			</div>
-			<div class="graph">
-				<canvas id="hexagon"></canvas>
-				<input type="hidden" name="fun" value=<%= card.fun %> />
-				<input type="hidden" name="grade" value=<%= card.grade %> />
-				<input type="hidden" name="benefit" value=<%= card.benefit %> />
-				<input type="hidden" name="homework" value=<%= card.homework %> />
-				<input type="hidden" name="difficulty" value=<%= card.difficulty %> />
-				<input type="hidden" name="teamplay" value=<%= card.teamplay %> />
-			</div>
-		</div>
-		<p class="evalButton">평가</p>
-		<!-- <div id="board"></div>-->
-		<p class="comment_p">Comments</p>
-		<div class="comments">
-			<%for(var i=0; i<comments.length; i++){%>
-				<div class="comment_div">
-					<div class="comment_id"><%= comments[i].userId %></div>
-					<div class="arrow"></div>
-					<div class="comment"><%= comments[i].comment %></div>
-				</div>
-			<%}%>
-		</div>
-	</div>
 	<div id="eval">
 		<form action ="/test" method="post">
 			<div class="year_sem">
@@ -102,5 +64,44 @@
 			<div class="checkButton"><input type="submit"></div>
 		</form>
 	</div>
+	<% include header.ejs %>
+	<div class="content">
+		<div class="professor_info">
+			<div class="picture">
+				<img src=<%= card.photo %> />
+			</div>
+			<div class="info">
+				<div class="name">
+    				<p><%= 'Title : '+card.courseName %></p>
+    				<p><%= 'Professor : '+card.profName %></p>
+    				<p><%= 'Credit : '+card.credit %></p>
+    				<p><%= 'Code : '+card.code %></p>
+    				<p><%= 'Department : '+card.department %></p>
+    			</div>
+			</div>
+			<div class="graph">
+				<canvas id="hexagon"></canvas>
+				<input type="hidden" name="fun" value=<%= card.fun %> />
+				<input type="hidden" name="grade" value=<%= card.grade %> />
+				<input type="hidden" name="benefit" value=<%= card.benefit %> />
+				<input type="hidden" name="homework" value=<%= card.homework %> />
+				<input type="hidden" name="difficulty" value=<%= card.difficulty %> />
+				<input type="hidden" name="teamplay" value=<%= card.teamplay %> />
+			</div>
+		</div>
+		<p class="evalButton">평가</p>
+		<!-- <div id="board"></div>-->
+		<p class="comment_p">Comments</p>
+		<div class="comments">
+			<%for(var i=0; i<comments.length; i++){%>
+				<div class="comment_div">
+					<div class="comment_id"><%= comments[i].userId %></div>
+					<div class="arrow"></div>
+					<div class="comment"><%= comments[i].comment %></div>
+				</div>
+			<%}%>
+		</div>
+	</div>
+
 </body>
 </html>

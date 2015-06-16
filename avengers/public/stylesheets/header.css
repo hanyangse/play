@@ -41,6 +41,9 @@
 	width: 90%;
 	border-radius: 100px;
 }
+#search input[type="submit"]{
+	display: none;
+}
 #login_info{
 	float: right;
 	min-width: 300px;
