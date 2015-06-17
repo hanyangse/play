@@ -150,7 +150,11 @@
       </div>
       <div class="column" id="wall"></div>
       <div class="column" id="rightCol">
-        <div class="tab">
+        <div class='tabs'>
+            <ul>
+                <li class="active"><a>최신</a></li>
+            </ul>
+          <div class="tab">
             <% for (var i = 0; i < benefitCards.length; i++) { %>
                 <div class="card">
                   <input type="hidden" name="code" value=<%= benefitCards[i].code %> />
@@ -174,6 +178,7 @@
                   </div>
             <%  } %>
             </div>
+          </div>
       </div>
     </div>
     </section>
