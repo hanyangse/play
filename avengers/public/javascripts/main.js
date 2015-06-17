@@ -14,6 +14,7 @@ $(function(){
 	$('.searchCancel').on('click', function(event) {
 		$('.searchBox').css({display: 'none'});
 		$('.searchButton').css({display: 'block'});
+		return false;
 	});
 
 	$('.tabs').tabslet({

@@ -23,14 +23,20 @@
         <button class="category" id="course">강의명</button>
       </div>
       <div class="searchBox" id="profForm">
-        <input class="searchForm" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
-        <button class="searchForm profBtn">찾기</button>
-        <button class="searchCancel">뒤로가기</button>
+        <form action="search" method="post">
+          <input type="hidden" name="how" value="p">
+          <input class="searchForm" name="keyword" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
+          <input type="submit" class="searchForm profBtn searchBtn" value="찾기" >
+          <button class="searchCancel">뒤로가기</button>
+        </form>
       </div>
       <div class="searchBox" id="courseForm">
-        <input class="searchForm" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
-        <button class="searchForm courseBtn">찾기</button>
-        <button class="searchCancel">뒤로가기</button>
+        <form action="search" method="post">
+          <input type="hidden" name="how" value="t">
+          <input class="searchForm" name="keyword" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
+          <input type="submit" class="searchForm courseBtn searchBtn" value="찾기" >
+          <button class="searchCancel">뒤로가기</button>
+        </form>
       </div>
     </div>
     <div id="view">
@@ -143,7 +149,37 @@
         </div>
       </div>
       <div class="column" id="wall"></div>
-      <div class="column" id="rightCol"></div>
+      <div class="column" id="rightCol">
+        <div class='tabs'>
+            <ul>
+                <li class="active"><a>최신</a></li>
+            </ul>
+          <div class="tab">
+            <% for (var i = 0; i < benefitCards.length; i++) { %>
+                <div class="card">
+                  <input type="hidden" name="code" value=<%= benefitCards[i].code %> />
+                    <div class="photo"><img src='<%- benefitCards[i].photo %>'></div>
+                    <div class="info">
+                      <div class="name">
+                        <p><%= 'Title : '+benefitCards[i].courseName %></p>
+                        <p><%= 'Professor : '+benefitCards[i].profName %></p>
+                      </div>
+                      <div class="graph">
+                        <canvas class="hexagon">
+                          <input type="hidden" name="fun" value=<%= benefitCards[i].fun %> />
+                          <input type="hidden" name="grade" value=<%= benefitCards[i].grade %> />
+                          <input type="hidden" name="benefit" value=<%= benefitCards[i].benefit %> />
+                          <input type="hidden" name="homework" value=<%= benefitCards[i].homework %> />
+                          <input type="hidden" name="difficulty" value=<%= benefitCards[i].difficulty %> />
+                          <input type="hidden" name="teamplay" value=<%= benefitCards[i].teamplay %> />
+                        </canvas>
+                      </div>
+                    </div>
+                  </div>
+            <%  } %>
+            </div>
+          </div>
+      </div>
     </div>
     </section>
   </body>
