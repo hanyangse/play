@@ -59,6 +59,7 @@ button.category:hover {
 	text-align: center;
 	display: block;
 	margin: 0 auto;
+	margin-top: 8px;
 	transition: #6363CE 0.3s ease 0s;
 }
 button.searchForm, button.searchCancel{
@@ -86,14 +87,14 @@ input.searchForm{
 	background: rgba(255, 255, 255, 0.7);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	color: #222;
-	display: inline-block;
+	/*display: inline-block;*/
 	font-family: "Source Sans Pro ExtraLight";
 	font-size: 25px;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	font-weight: 200;
 	height: auto;
-	margin: 0 0 5px 0px;
+	/* margin: 0 0 5px 0px; */
 	outline: none;
 	text-align: center;
 	width: 360px;
