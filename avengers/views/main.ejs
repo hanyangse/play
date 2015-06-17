@@ -23,14 +23,20 @@
         <button class="category" id="course">강의명</button>
       </div>
       <div class="searchBox" id="profForm">
-        <input class="searchForm" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
-        <button class="searchForm profBtn">찾기</button>
-        <button class="searchCancel">뒤로가기</button>
+        <form action="search" method="post">
+          <input type="hidden" name="how" value="p">
+          <input class="searchForm" id="profInput" type="text" placeholder="교강사" autocomplete="off" autocorrect="off"></input>
+          <input type="submit" class="searchForm profBtn" value="찾기" >
+          <button class="searchCancel">뒤로가기</button>
+        </form>
       </div>
       <div class="searchBox" id="courseForm">
-        <input class="searchForm" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
-        <button class="searchForm courseBtn">찾기</button>
-        <button class="searchCancel">뒤로가기</button>
+        <form action="search" method="post">
+          <input type="hidden" name="how" value="t">
+          <input class="searchForm" id="courseInput" type="text" placeholder="강의명" autocomplete="off" autocorrect="off"></input>
+          <input type="submit" class="searchForm courseBtn">찾기</input>
+          <button class="searchCancel">뒤로가기</button>
+        </form>
       </div>
     </div>
     <div id="view">

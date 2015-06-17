@@ -130,7 +130,10 @@ app.post('/search',function(req, res, next) {
 
 	//var user = {'email': req.session.email};
 	var keyword = "'%"+ req.body.keyword+"%'";
-	var queryString = 'select * from course where title like ' + keyword +' or professor like '+keyword ;
+	var how = req.body.how;
+	if (how=='a')	var queryString = 'select * from course where title like ' + keyword +' or professor like ' + keyword ;
+	else if (how == 'p') var queryString = 'select * from course where professor like ' + keyword ;
+	else if (how == 't') var queryString = 'select * from course where title like ' + keyword ;
 	console.log(queryString);
 	var query = connection.query(queryString,function(err,result){
 		if(err){
