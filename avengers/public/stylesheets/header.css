@@ -1,5 +1,5 @@
 #sticky{
-	height: 72px;
+	height: 85px;
 	width: 100%;
 	background-color: rgba(5, 130, 255, 0.71);
 	position: fixed;
@@ -8,13 +8,19 @@
 	top: 0px;
 	left: 0px;
 	text-align: center;
+	overflow: hidden;
 }
 #logo{
 	float: left;
 	display: inline-block;
-	width: 150px;
-	margin-top: 10px;
-	margin-left: 10px;
+	width: 155px;
+	height : 75px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+#logo_image{
+	width:150px;
+	height:72px;
 }
 #search {
 	display: inline-block;
@@ -30,6 +36,10 @@
 	background-color: white;
 }
 #search input{
+	
+	position:fixed;
+	left:25%;
+	right:10%;
 	background: rgba(255,255,255,0.6);
 	font-family: "Source Sans Pro Light";
 	font-size: 22px;
@@ -38,7 +48,7 @@
 	padding-left: 8%;
 	padding-right: 2%;
 	color: black;
-	width: 90%;
+	width: 40%;
 	border-radius: 100px;
 }
 #search input[type="submit"]{

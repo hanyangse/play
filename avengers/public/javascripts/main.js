@@ -28,4 +28,5 @@ $(function(){
 		temp_form.attr("method","post");
 		temp_form.submit();		
 	});
+	
 });
