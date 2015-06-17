@@ -59,6 +59,7 @@ button.category:hover {
 	text-align: center;
 	display: block;
 	margin: 0 auto;
+	margin-top: 8px;
 	transition: #6363CE 0.3s ease 0s;
 }
 button.searchForm, button.searchCancel{
@@ -78,7 +79,6 @@ button.searchForm, button.searchCancel{
 	text-transform: capitalize;
 	width: 360px;
 }
-
 button.searchForm:hover, button.searchCancel:hover{
 	background-color: #333;
 }
@@ -86,14 +86,14 @@ input.searchForm{
 	background: rgba(255, 255, 255, 0.7);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	color: #222;
-	display: inline-block;
+	/*display: inline-block;*/
 	font-family: "Source Sans Pro ExtraLight";
 	font-size: 25px;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	font-weight: 200;
 	height: auto;
-	margin: 0 0 5px 0px;
+	/* margin: 0 0 5px 0px; */
 	outline: none;
 	text-align: center;
 	width: 360px;
@@ -116,6 +116,28 @@ input.searchForm:focus{
 	-o-transition: background 0.3s;
 	transition: background 0.3s;
 }
+
+input[type="submit"].searchForm{
+	margin-top: 15px;
+	color: #FFF;
+	text-align: center;
+	border: medium none;
+	background: #F33F3F none repeat scroll 0% 0%;
+	transition: all 0.3s ease 0s;
+
+	background: #b2cf36 url('search_btnbg-f7d81f728c6a2c45ffa4b02511b9f185.jpg') center center no-repeat;
+	border: none;
+	color: #fff;
+	font-size: 23px;
+	height: 52px;
+	padding: 9px 0 10px;
+	text-transform: capitalize;
+	width: 360px;
+}
+input[type="submit"].searchForm:hover{
+	background-color: #333;
+}
+
 .searchBox{
 	display: none;
 	margin-top: 15px;
