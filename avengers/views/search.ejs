@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/search.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/card.css">
+
+		<script type="text/javascript" src="/javascripts/lib/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="/javascripts/lib/jquery.tabslet.js"></script>
+		<script type="text/javascript" src="/javascript/Chart.js"></script>
+		<script type="text/javascript" src="/javascripts/search.js"></script>
+		<script type="text/javascript" src="/javascripts/graph.js"></script>
+	</head>
+<body>
+
+  	<% include header.ejs %>
+
+  	<section class="content">
+  		<div class="searchView">
+		<%
+		for (var i = 0; i < cards.length; i++) { %>
+			<div class="card">
+				<input type="hidden" name="code" value=<%= cards[i].code %> />
+
+	    		<div class="photo"><img src='<%- cards[i].photo %>'></div>
+	    		<div class="info">
+	    			<div class="name">
+	    				<p><%= 'Title : '+cards[i].courseName %></p>
+	    				<p><%= 'Professor : '+cards[i].profName %></p>
+	    				<p><%= 'Credit : '+cards[i].credit %></p>
+	    				<p><%= 'Code : '+cards[i].code %></p>
+	    			</div>
+	    			<div class="graph">
+                        <canvas class="hexagon">
+                          <input type="hidden" name="fun" value=<%= cards[i].fun %> />
+                          <input type="hidden" name="grade" value=<%= cards[i].grade %> />
+                          <input type="hidden" name="benefit" value=<%= cards[i].benefit %> />
+                          <input type="hidden" name="homework" value=<%= cards[i].homework %> />
+                          <input type="hidden" name="difficulty" value=<%= cards[i].difficulty %> />
+                          <input type="hidden" name="teamplay" value=<%= cards[i].teamplay %> />
+                        </canvas>
+                        
+                      </div>
+	    		</div>
+	    	</div>
+	<%	}	%>
+  		</div>
+  		
+  	</section>
+  </body>
+</html>

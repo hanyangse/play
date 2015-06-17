@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/view.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/header.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/evaluation.css">
+	<link rel="stylesheet" href="stylesheets/jquery.raty.css">
+	<script src="javascript/jquery.raty.js" type="text/javascript"></script>
+	<script type="text/javascript" src="javascript/Chart.js"></script>
+	<script type="text/javascript" src="javascript/view.js"></script>
+	<script type="text/javascript" src="javascript/evaluation.js"></script>
+</head>
+<body>
+	<div id="eval">
+		<form action ="/test" method="post">
+			<div class="year_sem">
+				<select name="year" class="year"></select>
+				<select name="semester" class="semester"></select>	
+			</div>
+
+			<div class="star">
+				<div class="grade">
+					<p>학점</p>
+					<div class="grade_star"></div>
+					<input type="hidden" name="grade">
+				</div>
+				<div class="interesting">
+					<p>재미</p>
+					<div class="interest_star"></div>
+					<input type="hidden" name="fun">
+				</div>
+				<div class="benefit">
+					<p>학습</p>
+					<div class="benefit_star"></div>
+					<input type="hidden" name="benefit">
+				</div>
+				<div class="assignment">
+					<p>과제</p>
+					<div class="assign_star"></div>
+					<input type="hidden" name="homework">
+				</div>
+				<div class="teamproject">
+					<p>팀플</p>
+					<div class="teamprj_star"></div>	
+					<input type="hidden" name="teamplay">
+				</div>
+				<div class="difficulty">
+					<p>난이도</p>
+					<div class="difficult_star"></div>
+					<input type="hidden" name="difficulty">
+				</div>	
+			</div>
+			
+			<div class="makeComment">
+				<p>comment</p>
+				<textarea name ="comment" class="comment"></textarea>
+			</div>
+			
+			<div class="alert"></div>
+			<input type="hidden" name="code" value=<%= card.code %> />
+			<div class="checkButton"><input type="submit"></div>
+		</form>
+	</div>
+	<% include header.ejs %>
+	<div class="content">
+		<div class="professor_info">
+			<div class="picture">
+				<img src=<%= card.photo %> />
+			</div>
+			<div class="info">
+				<div class="name">
+    				<p><%= 'Title : '+card.courseName %></p>
+    				<p><%= 'Professor : '+card.profName %></p>
+    				<p><%= 'Credit : '+card.credit %></p>
+    				<p><%= 'Code : '+card.code %></p>
+    				<p><%= 'Department : '+card.department %></p>
+    			</div>
+			</div>
+			<div class="graph">
+				<canvas id="hexagon"></canvas>
+				<input type="hidden" class="graph" name="fun" value=<%= card.fun %> />
+				<input type="hidden" class="graph" name="grade" value=<%= card.grade %> />
+				<input type="hidden" class="graph" name="benefit" value=<%= card.benefit %> />
+				<input type="hidden" class="graph" name="homework" value=<%= card.homework %> />
+				<input type="hidden" class="graph" name="difficulty" value=<%= card.difficulty %> />
+				<input type="hidden" class="graph" name="teamplay" value=<%= card.teamplay %> />
+			</div>
+		</div>
+		<p class="evalButton">평가</p>
+		<!-- <div id="board"></div>-->
+		<p class="comment_p">Comments</p>
+		<div class="comments">
+			<%for(var i=0; i<comments.length; i++){%>
+				<div class="comment_div">
+					<div class="comment_id"><%= comments[i].userId %></div>
+					<div class="arrow"></div>
+					<div class="comment"><%= comments[i].comment %></div>
+				</div>
+			<%}%>
+		</div>
+	</div>
+
+</body>
+</html>

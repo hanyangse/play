@@ -1,0 +1,122 @@
+html{
+	width: 100%;
+	height: 100%;
+	min-width: 500px;
+	margin: 0;
+}
+body{
+	max-width: 1000px;
+	width: 80%;
+	margin: auto;
+}
+.professor_info{
+	width: 90%;
+	height: 200px;
+	min-height: 200px;
+	margin: 5% 5% 3% 5%;
+	display: inline-block;
+}
+.professor_info .picture{
+	float: left;
+	width: 20%;
+	height: 100%;
+	margin-right: 2%;
+}
+.professor_info .picture img{
+	width: 100%;
+	height: 100%;
+}
+.professor_info .info{
+	float: left;
+	width: 30%;
+	height: 100%;
+	margin-right: 2%;
+}
+.professor_info .info .professor{
+	line-height: 30px;
+	color: #999;
+	font-size: 1.5em;
+}
+.professor_info .info .course{
+	line-height: 20px;
+}
+
+.professor_info .graph{
+	float: left;
+	width: 46%;
+	height: 100%;
+}
+.professor_info .graph .hexagon{
+	width: 100%;
+	height: 100%;
+}
+.professor_info .graph .values{
+	visibility: hidden;
+}
+
+.evalButton{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	margin: 0px;
+	padding: 15px;
+	font-size: 1.3em;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 20px;
+	border: 1px solid #c3c3c3;
+	color: #fff;
+	background-color: cornflowerblue;
+	cursor: pointer;
+}
+
+.comment_p{
+	padding-left: 20px;
+	font-size: 1.3em;
+	line-height: 20px;
+}
+.comments{
+	width: 100%;
+	height: 60%;
+	border-top: 1px solid #c3c3c3;
+}
+.comments .comment_div{
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+	border-bottom: 1px solid #c3c3c3;
+	display: inline-block;
+}
+.comments .comment_div .comment_id{
+	font-weight: bold;
+	float: left;
+	width: 15%;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.comments .comment_div .arrow{
+	float: left;
+	width: 0;
+	height: 0;
+	border: 5px solid #fff antiquewhite #fff #fff;
+}
+.comments .comment_div .comment{
+	float: right;
+	width: 70%;
+	padding: 5%;
+	word-wrap: break-word;
+	word-break: break-all;
+	background-color: antiquewhite;
+}
+/*
+#board{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	height: 60%;
+}
+#board object{
+	width: 100%;
+	height: 100%;
+}*/

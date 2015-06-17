@@ -1,0 +1,199 @@
+body {
+
+  margin : auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#logo{
+	float: left;
+	display: inline-block;
+	width: 150px;
+	height : 72px;
+	margin-top: 0px;
+	margin-left: 10px;
+}
+header {
+	width : 100%;
+	position : fixed;
+	top : 0px;
+	height : 72px;
+	background-color: rgba(5,130,255,0.71);
+
+	padding : 5px;
+	overflow: hidden;
+	margin-bottom: 10px
+}
+
+
+/*section part*/
+section:before{
+	background: url("/images/back.jpeg") fixed;
+	background-size: cover;
+	content: '';
+	position: fixed;
+	top: 85px;
+	left:0;
+	right:0;
+	
+
+	height: 100%;
+	z-index: -1;
+	filter: blur(3px); 
+	-webkit-filter: blur(3px); 
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+}
+
+
+/*section {
+	background-image: url("images/로그인배경.JPG");
+	background-size: cover;
+	height : 650px;
+	
+}*/
+
+section > #sign_in{
+	display: block;
+	margin:auto;
+	background-color: rgba(0,0,0,0.6);
+	color: white; 
+	width : 500px;
+	height: 450px;
+	padding:10px;
+	position: fixed;
+	top: 25%;
+	bottom : 25%;
+	left: 50px;
+}
+article h1{
+	font-size: 50px;
+	margin: 0px;
+	margin-top: 25px;
+	margin-left: 10px;
+
+
+}
+article h2{
+	font-size: 35px;
+	margin: 0px;
+	margin-left:87px;
+	margin-bottom: 30px;
+
+}
+article p{
+	font-size: 20px;
+	margin-bottom: 50px;
+
+}
+article p > #to_signup, #to_signin{
+	float : right;
+
+}
+
+
+article form input[type=submit]{
+	background-color: purple;
+	color: white;
+	border: 0px;
+}
+/*
+article p:nth-child(3){
+	width: 380px;
+	text-align: right;
+}
+article p:nth-child(5){
+	font-size: 15px;
+	text-align: right;
+}
+article p:nth-child(5) a{
+	color: white;
+}
+*/
+article	form{
+	text-align: center;
+}
+article form input{
+	color : black;
+	display: inline;
+	margin-right: 10px;
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+	
+	margin-top: 10px;
+	text-align: center;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    black;
+}
+
+
+/*
+article form input:nth-child(3){
+	background-color: purple;
+	width: 60px;
+	height: 27px;
+	color: white;
+	border: 0px;
+
+}
+*/
+table{
+	background-color: white;
+	width: 45%;
+	margin:auto;
+}
+footer {
+	width : 100%;
+	height : 40px;
+	background-color: rgba(5,130,255,0.71);
+
+	clear : both;
+	padding : 10px;
+
+	position : fixed;
+	bottom : 0px;
+}
+
+
+#sign_up {
+	display: none;
+	margin:auto;
+	background-color: rgba(0,0,0,0.6);
+	color: white; 
+	width : 500px;
+	height: 550px;
+	padding:10px;
+	/*position: absolute;
+	top: 70px;
+	left: 750px;*/
+	position : fixed;
+	top : 18%;
+	right : 50px;
+}
+#sign_up form{
+	margin-bottom: 50px;
+}
+footer #div_fb{
+	background-color: rgba(70,70,150,0.6);
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	width: 240px;
+	padding: 4px;
+	padding-bottom: 6px;
+}
+footer #div_fb:hover{
+	background-color: rgba(66,66,160,0.9);
+}
+
+footer #div_fb img {
+	width: 35px;
+}
+
+
+

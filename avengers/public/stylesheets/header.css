@@ -1,0 +1,82 @@
+#sticky{
+	height: 85px;
+	width: 100%;
+	background-color: rgba(5, 130, 255, 0.71);
+	position: fixed;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	overflow: hidden;
+}
+#logo{
+	float: left;
+	display: inline-block;
+	width: 155px;
+	height : 75px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+#logo_image{
+	width:150px;
+	height:72px;
+}
+#search {
+	display: inline-block;
+	width: 45%;
+	margin-top: 18px;
+	
+}
+#search input:focus{
+	outline: none;
+	background-color: white;
+}
+#search input:hover{
+	background-color: white;
+}
+#search input{
+	
+	position:fixed;
+	left:25%;
+	right:10%;
+	background: rgba(255,255,255,0.6);
+	font-family: "Source Sans Pro Light";
+	font-size: 22px;
+	border: none;
+	height: 33px;
+	padding-left: 8%;
+	padding-right: 2%;
+	color: black;
+	width: 40%;
+	border-radius: 100px;
+}
+#search input[type="submit"]{
+	display: none;
+}
+#login_info{
+	float: right;
+	min-width: 300px;
+	width: 30%;
+}
+#login_info input{
+	background: none;
+	border: none;
+	color: white;
+	font-size: 17pt;
+	display: inline-block;
+	height: auto;
+	padding: 20px;
+	float: right;
+}
+
+#login_info input:hover{
+	color: #ddd;
+}
+
+#login_info span{
+	float: right;
+	color: #FFF;
+	padding-top: 25px;
+	font-size: 13pt;
+}
