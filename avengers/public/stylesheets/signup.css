@@ -116,15 +116,20 @@ article	form{
 	text-align: center;
 }
 article form input{
+	color : black;
 	display: inline;
 	margin-right: 10px;
 	width: 250px;
 	height: 30px;
 	border-radius: 5px;
-	color: rgba(0,0,0,0.3);
+	
 	margin-top: 10px;
 	text-align: center;
 }
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    black;
+}
+
 
 /*
 article form input:nth-child(3){
