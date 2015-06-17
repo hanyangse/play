@@ -149,7 +149,32 @@
         </div>
       </div>
       <div class="column" id="wall"></div>
-      <div class="column" id="rightCol"></div>
+      <div class="column" id="rightCol">
+        <div class="tab">
+            <% for (var i = 0; i < benefitCards.length; i++) { %>
+                <div class="card">
+                  <input type="hidden" name="code" value=<%= benefitCards[i].code %> />
+                    <div class="photo"><img src='<%- benefitCards[i].photo %>'></div>
+                    <div class="info">
+                      <div class="name">
+                        <p><%= 'Title : '+benefitCards[i].courseName %></p>
+                        <p><%= 'Professor : '+benefitCards[i].profName %></p>
+                      </div>
+                      <div class="graph">
+                        <canvas class="hexagon">
+                          <input type="hidden" name="fun" value=<%= benefitCards[i].fun %> />
+                          <input type="hidden" name="grade" value=<%= benefitCards[i].grade %> />
+                          <input type="hidden" name="benefit" value=<%= benefitCards[i].benefit %> />
+                          <input type="hidden" name="homework" value=<%= benefitCards[i].homework %> />
+                          <input type="hidden" name="difficulty" value=<%= benefitCards[i].difficulty %> />
+                          <input type="hidden" name="teamplay" value=<%= benefitCards[i].teamplay %> />
+                        </canvas>
+                      </div>
+                    </div>
+                  </div>
+            <%  } %>
+            </div>
+      </div>
     </div>
     </section>
   </body>

@@ -199,6 +199,7 @@ app.post('/signin_submit',function(req,res){
 				var funCards = [];
 				var gradeCards = [];
 				var benefitCards = [];
+				var newCards = [];
 				var query = connection.query("select * , concat(fun+benefit+grade-homework-difficulty-teamplay) sum from totalv order by sum limit 10", function(err,result){
 					if(err){
 						console.log(err);
@@ -286,6 +287,28 @@ app.post('/signin_submit',function(req,res){
 							teamplay: result[i]['teamplay']
 						};
 					}
+					var query = connection.query("select * from totalvv order by inputdate desc limit 10",function(err,result){
+					if(err){
+						console.log(err);
+						return err;
+					}
+
+					for (var i = 0; i < result.length; i++) {
+						newCards[i]= {
+							courseName : result[i]['title'],
+							profName : result[i]['professor'],
+							code : result[i]['code'],
+							credit : result[i]['credits'],
+							department : result[i]['department'],
+							photo: '/images/man.png',
+							fun: result[i]['fun'],
+							grade: result[i]['grade'],
+							benefit: result[i]['benefit'],
+							homework: result[i]['homework'],
+							difficulty: result[i]['difficulty'],
+							teamplay: result[i]['teamplay']
+						};
+					}
 					req.session.email = user.email;
 					res.render('main.ejs',{
 						 'email':user.email,
@@ -293,7 +316,9 @@ app.post('/signin_submit',function(req,res){
 						 'funCards': funCards,
 						 'gradeCards': gradeCards,
 						 'benefitCards': benefitCards,
+						 'newCards': newCards
 						});	
+				});
 				});
 				});
 				});
