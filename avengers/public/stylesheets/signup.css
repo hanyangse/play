@@ -12,30 +12,48 @@ a {
 	display: inline-block;
 	width: 150px;
 	height : 72px;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-left: 10px;
 }
 header {
-
+	width : 100%;
+	position : fixed;
+	top : 0px;
 	height : 72px;
 	background-color: rgba(5,130,255,0.71);
 
 	padding : 5px;
 	overflow: hidden;
-}
-header > form{
-	float:left;
-}
-header > div{
-	float:right;
+	margin-bottom: 10px
 }
 
+
 /*section part*/
-section {
+section:before{
+	background: url("/images/back.jpeg") fixed;
+	background-size: cover;
+	content: '';
+	position: fixed;
+	top: 85px;
+	left:0;
+	right:0;
+	
+
+	height: 100%;
+	z-index: -1;
+	filter: blur(3px); 
+	-webkit-filter: blur(3px); 
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+}
+
+
+/*section {
 	background-image: url("images/로그인배경.JPG");
 	background-size: cover;
 	height : 650px;
-}
+	
+}*/
 
 section > #sign_in{
 	display: block;
@@ -43,11 +61,12 @@ section > #sign_in{
 	background-color: rgba(0,0,0,0.6);
 	color: white; 
 	width : 500px;
-	height: 400px;
+	height: 450px;
 	padding:10px;
-	position: absolute;
-	top: 150px;
-	left: 60px;
+	position: fixed;
+	top: 25%;
+	bottom : 25%;
+	left: 50px;
 }
 article h1{
 	font-size: 50px;
@@ -66,7 +85,8 @@ article h2{
 }
 article p{
 	font-size: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
+
 }
 article p > #to_signup, #to_signin{
 	float : right;
@@ -103,6 +123,7 @@ article form input{
 	border-radius: 5px;
 	color: rgba(0,0,0,0.3);
 	margin-top: 10px;
+	text-align: center;
 }
 
 /*
@@ -121,12 +142,15 @@ table{
 	margin:auto;
 }
 footer {
-
+	width : 100%;
 	height : 40px;
 	background-color: rgba(5,130,255,0.71);
 
 	clear : both;
 	padding : 10px;
+
+	position : fixed;
+	bottom : 0px;
 }
 
 
@@ -138,9 +162,15 @@ footer {
 	width : 500px;
 	height: 550px;
 	padding:10px;
-	position: absolute;
+	/*position: absolute;
 	top: 70px;
-	left: 750px;
+	left: 750px;*/
+	position : fixed;
+	top : 18%;
+	right : 50px;
+}
+#sign_up form{
+	margin-bottom: 50px;
 }
 footer #div_fb{
 	background-color: rgba(70,70,150,0.6);
